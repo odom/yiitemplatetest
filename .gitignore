@@ -1,5 +1,7 @@
 yii
-/nbproject/*
+/myapp/nbproject/private/
+
+/myapp/nbproject/*
 /myapp/assets/*
 !/assets/NOTHING
 
