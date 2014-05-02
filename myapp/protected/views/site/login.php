@@ -18,14 +18,13 @@ $form = $this->beginWidget('CActiveForm', array(
     ),
         ));
 ?>
-<div class ="well col-sm-5 col-sm-offset-4">
+<div class ="well col-sm-6 col-sm-offset-3">
     <div class="input-group col-sm-8 col-sm-offset-4">
         <h2>Sign in</h2>
     </div>
 
     <div class="login_field">
         <div class="input-group col-sm-8 col-sm-offset-4">
-            <!--                <h2>Sign in</h2>-->
             <?php //echo $form->labelEx($model,'username'); ?>
             <span class="input-group-addon glyphicon glyphicon-user"></span>
             <?php echo $form->textField($model, 'username', array('class' => 'form-control', 'placeholder' => 'Username')); ?>
