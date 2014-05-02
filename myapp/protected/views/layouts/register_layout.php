@@ -20,7 +20,7 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body class="homepage">
+<body class="register_page">
 
 <div class="container">
 	<?php echo $content; ?>
