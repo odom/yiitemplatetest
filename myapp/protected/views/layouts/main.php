@@ -21,16 +21,16 @@
 
 <body>
 
-<div class="container" id="page">
+<div class="container">
 	<?php echo $content; ?>
 
-	<div class="clear"></div>
+<!--	<div class="clear"></div>-->
 
-	<div id="footer">
+<!--	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by Mapring.<br/>
 		All Rights Reserved.<br/>
 		<?php //echo Yii::powered(); ?>
-	</div><!-- footer -->
+	</div> footer -->
 
 </div><!-- page -->
 

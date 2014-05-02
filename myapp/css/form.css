@@ -82,30 +82,30 @@ div.form span.required
 	color: red;
 }
 
-div.form div.error label:first-child,
-div.form label.error,
-div.form span.error
+div div.error label:first-child,
+div label.error,
+div span.error
 {
 	color: #C00;
 }
 
-div.form div.error input,
-div.form div.error textarea,
-div.form div.error select,
-div.form input.error,
-div.form textarea.error,
-div.form select.error
+div div.error input,
+div div.error textarea,
+div div.error select,
+div input.error,
+div textarea.error,
+div select.error
 {
 	background: #FEE;
 	border-color: #C00;
 }
 
-div.form div.success input,
-div.form div.success textarea,
-div.form div.success select,
-div.form input.success,
-div.form textarea.success,
-div.form select.success
+div div.success input,
+div div.success textarea,
+div div.success select,
+div input.success,
+div textarea.success,
+div select.success
 {
 	background: #E6EFC2;
 	border-color: #C6D880;
@@ -125,7 +125,7 @@ div.form .errorSummary
 	font-size: 0.9em;
 }
 
-div.form .errorMessage
+div .errorMessage
 {
 	color: red;
 	font-size: 0.9em;
@@ -161,4 +161,13 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 {
 	clear: left;
 	padding-left: 110px;
+}
+#login-form
+{
+    margin-top: 150px;
+}
+.login_field
+{
+    padding: 10px;
+    margin-left: -40%;
 }
