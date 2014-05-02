@@ -41,7 +41,7 @@ body{
               <div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="Email(Optional)" required="required">
               </div>
-              <div class="col-sm-offet-4">
+              <div class="text-center">
               	By acount condition to <a href="#" style="color:white">Terms & Condition of use</a>
               </div>
               <div class="form-group col-sm-offset-4">
