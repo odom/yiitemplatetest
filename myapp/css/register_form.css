@@ -3,8 +3,12 @@ body.register_page{
 }
 .register{
 	border-radius:3px;
-	height:400px;
+	height:350px;
 	box-shadow:0 1px 10px #888888;
 	background:rgba(40, 132, 112, 0.8);
 	margin-top: 60px;
+}
+
+.register * {
+    border-radius: 0;
 }
