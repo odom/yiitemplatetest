@@ -171,3 +171,19 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
     padding: 10px;
     margin-left: -40%;
 }
+.bg_img_login
+{
+    background-image: url('../images/blue-background.jpg');   
+}
+#social_signin
+{
+    padding: 5px;
+}
+#social_signinGoogle
+{
+    padding-right: 30px;
+}
+#social_signinTwitter
+{
+    padding-right: 33px;
+}
