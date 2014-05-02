@@ -18,6 +18,7 @@ yii
 /myapp/protected/config/main.local.php
 
 /myapp/protected/tests/
-
+.settings
+.c9revisions
 .idea
 .project
