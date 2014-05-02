@@ -112,7 +112,7 @@ class SiteController extends Controller
 	 */
 	public function actionRegister()
 	{
-            $this->layout = 'register';
+            $this->layout = 'register_layout';
             $this->render('register');
 	}
 }
