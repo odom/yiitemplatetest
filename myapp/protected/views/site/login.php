@@ -18,6 +18,7 @@ $form = $this->beginWidget('CActiveForm', array(
     ),
         ));
 ?>
+
 <div class ="well col-sm-6 col-sm-offset-3">
     <div class="input-group col-sm-8 col-sm-offset-4">
         <h2>Sign in</h2>
@@ -52,7 +53,7 @@ $form = $this->beginWidget('CActiveForm', array(
             <?php echo $form->error($model, 'rememberMe'); ?>
         </div>
 
-        <div class="input-group col-sm-4 col-sm-offset-6">
+        <div class="input-group col-sm-3 col-sm-offset-6">
             <?php echo CHtml::submitButton('ENTER', array('class' => 'btn btn btn-primary btn-block')); ?>
         </div>
         <div>
@@ -61,3 +62,14 @@ $form = $this->beginWidget('CActiveForm', array(
             <!--</div> -->
             <!--form -->
         </div>
+    </div>
+    <div class="input-group col-sm-4 col-sm-offset-3" id="social_signin">
+        <a type="button" class="btn btn-primary" id="" href=""><i class=" glyphicon glyphicon-thumbs-up"></i>&nbsp; Sign in with Facebook</a>
+    </div>
+    <div class="input-group col-sm-4 col-sm-offset-3" id="social_signin">
+        <a type="button" class="btn btn-info" id="social_signinTwitter" href=""><i class=" glyphicon glyphicon-thumbs-up"></i>&nbsp; Sign in with Twitter</a>
+    </div>
+    <div class="input-group col-sm-4 col-sm-offset-3" id="social_signin">
+        <a type="button" class="btn btn-danger" id="social_signinGoogle" href=""><i class=" glyphicon glyphicon-thumbs-up"></i>&nbsp; Sign in with Google</a>
+    </div>
+</div>
