@@ -115,4 +115,13 @@ class SiteController extends Controller
             $this->layout = 'register_layout';
             $this->render('register');
 	}
+        
+         /**
+	 * Home Action
+	 */
+	public function actionHome()
+	{
+            $this->layout = 'homepage';
+            $this->render('home');
+	}
 }
