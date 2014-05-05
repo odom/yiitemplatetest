@@ -1,45 +1,45 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+        <!-- blueprint CSS framework -->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+        <![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    </head>
 
-<body class="homepage">
-    <div class="whole-content">
-        <div class="panel-left">
-            <div class="menu-left">
+    <body class="homepage">
+        <div class="whole-content">
+            <div class="panel-left">
+                <div class="menu-left">
+                </div>
+                <div class="nav-left">
+
+                </div>
             </div>
-            <div class="nav-left">
+            <div class="main-content">
+                <?php echo $content; ?>
+            </div>
+            <div class="panel-right">
+                <div class="nav-right">
 
+                </div>
+                <div class="menu-right">
+                </div>
             </div>
         </div>
-        <div class="main-content">
-            <?php echo $content; ?>
-        </div>
-        <div class="panel-right">
-            <div class="nav-right">
 
-            </div>
-            <div class="menu-right">
-            </div>
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>
