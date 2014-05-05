@@ -1,9 +1,11 @@
-body {
+/*body {
+    margin: 0;
+    padding: 0;
     
 }
 .whole-content {
     height: 800px;
-    background: #09f;
+    background:#060;
     position: relative;
     width: 100%;
     display: inline;
@@ -14,8 +16,12 @@ body {
 .panel-left, .panel-right {
     height: 800px;
 }
+.nav-left,.menu-left{
+    float: left;
+}
 .main-content {
-    width: 80%;
+    width: 60%;
+    background: orange;
 }
 .panel-left .menu-left, .panel-right .menu-right{
     width: 200px;
@@ -24,9 +30,64 @@ body {
 }
 
 .nav-left, .nav-right {
-    background: #ddcaca;
+    background:red;
     height: 800px;
     width: 60px;
+}*/
+body{
+    margin:0;
+    padding:0;
+}
+.whole-content {
+  border:1px solid purple;
+  width:100%;
+  height: 800px;
+  text-align:left;
+  position:relative;
+}
+
+.panel-left {
+  border:2px solid green;
+  float:left;
+  margin:0;
+}
+.menu-left{
+    float: left;
+    width: 200px;
+    background:#060;
+}
+.nav-left{
+    float: right;
+    width: 60px;
+    background:plum;
+}
+.panel-right {
+  position:absolute;
+  top:0;
+  right:0;
+  border:2px solid green;
+  margin:0;
+  
+}
+.menu-right{
+    float:right;
+    width: 200px;
+    background:#060;
+    
+}
+.nav-right{
+    float:left;
+    width: 60px;
+    background:plum;
+}
+.panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
+ height:800px;
+}
+
+.main-content {
+  border:2px solid blue;
+  width:72.9%;
+  margin:0 0 0 260px;
 }
 
 
