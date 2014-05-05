@@ -123,7 +123,7 @@ class SiteController extends Controller
 	 */
 	public function actionHome()
 	{
-            $this->layout = 'homepage';
+            $this->layout = 'homepage_layout';
             $this->render('home');
 	}
 }
