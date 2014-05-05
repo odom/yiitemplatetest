@@ -1,0 +1,66 @@
+/* ###  */
+.login .input-group-addon {
+    border-radius: 3px 0 0 3px;
+}
+.register .input-group .form-control, .register .input-lg, .register .btn
+.login .input-group .form-control,  .form-control, .login .btn { 
+    border-radius: 3px;
+}
+
+.register h3, 
+.login h3 {
+    color: #fff;
+    padding: 0 15%;
+}
+
+ .login .input-group span {
+     padding: 0 5px;
+     font-size: 25px;
+ }
+
+/*### Cut From Register Form CSS ###*/
+body.register_page{
+	background:url(../images/tropical_dock-wallpaper-1366x768.jpg) no-repeat scroll center;	
+}
+
+.register, .login {
+	height:400px;
+	box-shadow:0 1px 10px #888888;
+	background:rgba(40, 132, 112, 0.95);
+	margin-top: 60px;
+}
+
+.register .form-group,
+.login .input-group {
+	padding: 0 15%;
+}
+.social-sign-in {
+    margin: 20px;
+}
+
+.social-sign-in a {
+    width: 50%;    
+    text-align: left;
+}
+
+.social-sign-in a i {
+    font-size: 20px;
+    border-right: 1px solid;
+    padding-right: 10px;
+} 
+
+.social-sign-in  .fa-facebook {
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+
+/*### Footer Navigation ####*/
+
+.footernav li {
+    margin: 10px 30px;
+}
+
+.footernav.nav > li > a {
+    padding: 12px 35px;
+}
