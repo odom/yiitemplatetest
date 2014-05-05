@@ -20,26 +20,19 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
-    <body class="homepage">
+    <body class="homepage">    
         <div class="whole-content">
             <div class="panel-left">
-                <div class="menu-left">
-                </div>
-                <div class="nav-left">
-
-                </div>
+                <div class="menu-left"></div>
+                <div class="nav-left"></div>
             </div>
             <div class="main-content">
-                <?php echo $content; ?>
+                <?php //echo $content; ?>
             </div>
             <div class="panel-right">
-                <div class="nav-right">
-
-                </div>
-                <div class="menu-right">
-                </div>
+                <div class="nav-right"></div>
+                <div class="menu-right"></div>
             </div>
-        </div>
-
+        </div>          
     </body>
 </html>
