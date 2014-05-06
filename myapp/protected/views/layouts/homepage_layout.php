@@ -30,7 +30,7 @@
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
                         <div class="menu-item">
-                            <span class="profile-image"><a href="#"><img src="../../images/avatar.png" /></a></span>
+                            <span class="profile-image"><a href="#"><img src="../images/avatar.png" /></a></span>
                             <ul>
                                 <li><i class="fa fa-circle icon-online"></i></li>
                                 <li><i class="fa fa-info-circle icon-info"></i></li>
@@ -39,16 +39,82 @@
                         </div>
                     </div>
 
-                    <div class="menu-header banner-md">
+                    <div class="title-bar-right banner-md">
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
-<!--                        <ul><i class="fa fa-sort-desc"></i></ul>-->
+                        <span class="span-left">
+                            <i class="fa fa-sort-desc"></i> <span>My World</span>
+                        </span>
+                        <span class="span-right">
+                            <a href="#"><i class="fa fa-plus"></i></a>
+                            <a href="#"><img src="../images/magnifier.png" class="search-image"/></a>
+                        </span>
+                    </div> 
+                    <div class="list-view-group">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="div-avatar">     
+                                        <img src="../images/Santa_Place.jpg"/>                                  
+                                        <span class="list-view">Sopheak Room</span>
+                                        <i class="fa fa-dropbox dropbox"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="div-avatar">     
+                                        <img src="../images/Santa_Place.jpg"/>                                
+                                        <span class="list-view">Dara Room</span>
+                                        <i class="fa fa-dropbox dropbox"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="div-avatar">     
+                                        <img src="../images/Santa_Place.jpg"/>                                   
+                                        <span class="list-view">Business Room</span>
+                                        <i class="fa fa-dropbox dropbox"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="menu-header banner-md">
+                    <div class="title-bar-right banner-md">
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
-                    </div>                   
+                        <span class="span-left">
+                            <i class="fa fa-sort-desc"></i> <span>Your World</span>
+                        </span>
+                        <span class="span-right">
+                            <a href="#"><img src="../images/magnifier.png" class="search-image"/></a>
+                        </span>
+                    </div> 
+                    <div class="list-view-group">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="div-avatar">     
+                                        <img src="../images/Santa_Place.jpg"/>                                  
+                                        <span class="list-view">Jeen Room</span>
+                                        <i class="fa fa-dropbox dropbox"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="div-avatar">     
+                                        <img src="../images/Santa_Place.jpg"/>                                
+                                        <span class="list-view">Odom Room</span>
+                                        <i class="fa fa-dropbox dropbox"></i>
+                                    </div>
+                                </a>
+                            </li>                           
+                        </ul>
+                    </div>
+                    <span class="direction-left"><a href="#"><i class="fa fa-angle-double-left"></i></a></span>
                 </div>
                 <div class="nav-left"></div>
             </div>

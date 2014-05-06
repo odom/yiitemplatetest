@@ -14,10 +14,12 @@ body{
     float:left;
     margin:0;
 }
+/*Updated*/
 .menu-left{
     float: left;
     width: 200px;
     background:#455363;
+    position: relative;
 }
 .nav-left{
     float: right;
@@ -44,8 +46,9 @@ body{
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
 }
+/*Updated*/
 .main-content {
-    /*    border:2px solid blue;*/
+    border:2px solid #737373;
     width:72.9%;
     margin:0 0 0 260px;
 }
@@ -102,6 +105,7 @@ body{
     margin-left: -12px;
     margin-top: 10px;
     position: absolute;
+    color: white;
 }
 
 /*ADD MORE CSS*/
@@ -171,42 +175,12 @@ body{
 .nav-list ul img{
     width: 25px;
 }
-/*.contact-list{
-    margin-top: 15px;
-    height:200px;
-}
-.contact-list ul li span img{
-    width: 30px;
-    height: 30px;
-}
 
-.menu-right .contact-list ul{
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-.menu-right .contact-list ul a{
-    display:block;
-    width: 100%;
-    color:#FFFFFF;
-    padding:10px 10px 10px 40px;
-    text-decoration:none;
-}
-
-.menu-right .contact-list ul li{
-    border:1px solid #6a717c;
-    border-style: none;
-    border-bottom-style:solid;
-}
-.menu-right .contact-list ul li:first-child{
-    border:1px solid #6a717c;
-    border-left-style: none;
-    border-right-style: none;
-}
-*/
+/*Updated*/
 .list-view-group{
-    margin-top: 15px;
+    margin-top: 10px;
     height:225px;  
+/*    border: 2px solid red;*/
 }
 .list-view-group ul{
     list-style-type:none;
@@ -222,7 +196,7 @@ body{
 .list-view-group ul li .div-avatar img{ 
     float:left;
     width: 35px;
-    height:35px;
+/*    height:35px;*/
 }
 .list-view-group ul li .div-avatar{
     display:block;
@@ -239,14 +213,8 @@ body{
     padding-left: 3px;
     color: white;
     position: relative;
-    top: 0px;
+    top: 0;
     left: 5px;
-}
-.list-view-group ul li .div-avatar i{
-    color: greenyellow;
-    position:relative;
-    top: 22px;
-    left:-5px;
 }
 .list-view-group ul li:first-child{
     border:1px solid #6a717c;
@@ -281,7 +249,42 @@ body{
     color: #181D23;
     line-height: 35px;
 }
-.list-view-group ul li a{
+/*Sopheak add more css*/
+.search-image{
+    width: 14px;
+    margin-left: 5px;
+}
+.list-view-group ul li .div-avatar list-view{
+    padding-left: 10px;
+    color: #181D23;
+    line-height: 35px;
+}/*
+*/.list-view-group ul li a{
     text-decoration: none;
+}/*
+*/
+.list-view-group ul li .div-avatar i{
+    color: greenyellow;
+    position:relative;
+    top: 22px;
+    left:-5px;
+}
+.list-view-group ul li .div-avatar .dropbox{
+    display: block;
+    float: right;
+    margin-right: -7px;
+    top: 12px;
+    color: #FFF;
+}
+.direction-left{
+    top: 44%;
+    background:#455363;
+    position:absolute;
+    height:20px;
+    right: -10px;
+    width: 12px;
+    text-align:left;
+    padding:3px;
+    border-radius:0 5px 5px 0;
 }
 
