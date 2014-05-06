@@ -56,7 +56,26 @@
                 <?php //echo $content; ?>
             </div>
             <div class="panel-right">
-                <div class="nav-right"></div>
+                <div class="nav-right">
+                    <div class="nav-list nav-list-top">
+                        <ul>
+                            <li><a href="#"><img src="../images/share.png"/></a></li>
+                            <li><a href="#"><img src="../images/changeBackground.png"/></a></li>
+                             <li><a href="#"><img src="../images/displayCanvas.png"/></a></li>
+                            <li><a href="#"><img src="../images/displayThumbnails.png"/></a></li>
+                              <li><a href="#"><img src="../images/displayList.png"/></a></li>
+                             
+                            
+                        </ul>
+                    </div>
+                  <div class="nav-list">
+                        <ul>
+                            <li><a href="#"><img src="../images/cosync.png"/></a></li>
+                            <li><a href="#"><img src="../images/dashboard.png"/></a></li>
+                             <li><a href="#"><img src="../images/whiteboard.png"/></a></li>                            
+                        </ul>
+                    </div>
+                </div>
                 <div class="menu-right">
                     <div class="title-bar-right banner-md">
                         <span class="triangle-top-right"></span>
@@ -70,10 +89,24 @@
                         </span>
                     </div>
 
-                    <div class="contact-list">
+                    <div class="list-view-group">
                         <ul>
-                            <li><a href="#Floophie">Floophie</a></li>
-                            <li><a href="#Bill">Bill</a></li>
+                            <li>
+                                <a href="#">
+                                <div class="div-avatar">
+                                    <img src="../images/avatar.png"/>
+                                    <span class="list-view">Floophie</span>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                <div class="div-avatar">
+                                    <img src="../images/avatar.png"/>
+                                    <span class="list-view">Floophie</span>
+                                </div>
+                                </a> 
+                            </li>
                         </ul>
                     </div>
 
@@ -87,19 +120,26 @@
                             <a href="#"><i class="fa fa-minus-circle"></i></a>
                         </span>
                     </div>
-                    <div class="user-online">
+                    <div class="list-view-group">
                         <ul>
                             <li>
-                                <div class="div-avatar">     
+                                <div class="div-avatar"> 
                                     <img src="../images/avatar.png"/>
                                     <i class="fa fa-circle fa-online"></i>
                                     <span>Floophie</span>
-                                    <i class=""></i>
+                                    <div class="group-sm-link">
+                                        <a href="#"><i class="fa fa-phone"></i></a>
+                                        <a href="#"><i class="fa fa-comment"></i></a>
+                                        <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#"><i class="fa fa-info-circle"></i></a>
+                                        <a href="#"><i class="fa fa-eye"></i></a>                                
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </div>                    
+                    <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
+                </div>
             </div>
         </div>          
     </body>
