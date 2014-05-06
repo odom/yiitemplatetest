@@ -14,10 +14,12 @@ body{
     float:left;
     margin:0;
 }
+/*Updated*/
 .menu-left{
     float: left;
     width: 200px;
     background:#455363;
+    position: relative;
 }
 .nav-left{
     float: right;
@@ -43,8 +45,9 @@ body{
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
 }
+/*Updated*/
 .main-content {
-    /*    border:2px solid blue;*/
+    border:2px solid #737373;
     width:72.9%;
     margin:0 0 0 260px;
 }
@@ -101,6 +104,7 @@ body{
     margin-left: -12px;
     margin-top: 10px;
     position: absolute;
+    color: white;
 }
 
 /*ADD MORE CSS*/
@@ -169,42 +173,45 @@ body{
     border-left-style: none;
     border-right-style: none;
 }
-.user-online{
-    margin-top: 15px;
-    height:200px;  
+/*Updated*/
+.list-view-group{
+    margin-top: 10px;
+    height:225px;  
+/*    border: 2px solid red;*/
 }
-.user-online ul{
+.list-view-group ul{
     list-style-type:none;
     margin:0;
     padding:0;  
 }
-.user-online ul li{
+.list-view-group ul li{
     border:1px solid #ffffff;
     border-style: none;
     border-bottom-style:solid;
 }
-.user-online ul li .div-avatar img{ 
+/*Updated*/
+.list-view-group ul li .div-avatar img{ 
     float:left;
     width: 35px;
-    height:35px;
+/*    height:35px;*/
 }
-.user-online ul li .div-avatar{
+.list-view-group ul li .div-avatar{
     display:block;
     height: 45px;
     width: 100%;
     color:#FFFFFF;
     padding:5px 10px 10px 10px;
 }
-.user-online ul li .group-sm-link{
+.list-view-group ul li .group-sm-link{
 
 }
-.user-online ul li .div-avatar i{
+.list-view-group ul li .div-avatar i{
     color: greenyellow;
     position:relative;
     top: 25px;
     left:-5px;
 }
-.user-online ul li:first-child{
+.list-view-group ul li:first-child{
     border:1px solid #ffffff;
     border-left-style: none;
     border-right-style: none;
@@ -220,5 +227,36 @@ body{
 }
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
+}
+/*Sopheak add more css*/
+.search-image{
+    width: 14px;
+    margin-left: 5px;
+}
+.list-view-group ul li .div-avatar span{
+    padding-left: 10px;
+    color: #181D23;
+    line-height: 35px;
+}
+.list-view-group ul li a{
+    text-decoration: none;
+}
+.list-view-group ul li .div-avatar i{
+    display: block;
+    float: right;
+    margin-right: -7px;
+    top: 12px;
+    color: #FFF;
+}
+.direction-left{
+    top: 44%;
+    background:#455363;
+    position:absolute;
+    height:20px;
+    right: -10px;
+    width: 12px;
+    text-align:left;
+    padding:3px;
+    border-radius:0 5px 5px 0;
 }
 
