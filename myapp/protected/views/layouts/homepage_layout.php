@@ -42,17 +42,13 @@
                     <div class="menu-header banner-md">
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
-                        <ul><i class="fa fa-sort-desc"></i></ul>
+<!--                        <ul><i class="fa fa-sort-desc"></i></ul>-->
                     </div>
 
                     <div class="menu-header banner-md">
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
-                    </div>
-                    <!--                    <div class="menu-myworld"></div>
-                                        <div id="triangle-topleft"></div>
-                                        <div class="menu-yourworld"></div>
-                                        <div id="triangle-topleft"></div>-->
+                    </div>                   
                 </div>
                 <div class="nav-left"></div>
             </div>
@@ -61,7 +57,49 @@
             </div>
             <div class="panel-right">
                 <div class="nav-right"></div>
-                <div class="menu-right"></div>
+                <div class="menu-right">
+                    <div class="title-bar-right banner-md">
+                        <span class="triangle-top-right"></span>
+                        <i class="triangle-top-right-conner"></i>
+                        <span class="span-left">
+                            <i class="fa fa-sort-desc"></i> <span>Contact</span>
+                        </span>
+                        <span class="span-right">
+                            <a href="#"><i class="fa fa-plus-circle"></i></a>
+                            <a href="#"><i class="fa fa-minus-circle"></i></a>
+                        </span>
+                    </div>
+
+                    <div class="contact-list">
+                        <ul>
+                            <li><a href="#Floophie">Floophie</a></li>
+                            <li><a href="#Bill">Bill</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="title-bar-right banner-md">
+                        <span class="triangle-top-right"></span>
+                        <i class="triangle-top-right-conner"></i>
+                        <span class="span-left">
+                            <i class="fa fa-sort-desc"></i> <span>Guests in Room</span>
+                        </span>
+                        <span class="span-right">
+                            <a href="#"><i class="fa fa-minus-circle"></i></a>
+                        </span>
+                    </div>
+                    <div class="user-online">
+                        <ul>
+                            <li>
+                                <div class="div-avatar">     
+                                    <img src="../images/avatar.png"/>
+                                    <i class="fa fa-circle fa-online"></i>
+                                    <span>Floophie</span>
+                                    <i class=""></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                    
             </div>
         </div>          
     </body>

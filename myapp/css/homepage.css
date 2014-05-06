@@ -1,110 +1,66 @@
-/*body {
-    margin: 0;
-    padding: 0;
-    
-}
-.whole-content {
-    height: 800px;
-    background:#060;
-    position: relative;
-    width: 100%;
-    display: inline;
-}
-.panel-left, .panel-right, .main-content {
-    display: inline-block;
-}
-.panel-left, .panel-right {
-    height: 800px;
-}
-.nav-left,.menu-left{
-    float: left;
-}
-.main-content {
-    width: 60%;
-    background: orange;
-}
-.panel-left .menu-left, .panel-right .menu-right{
-    width: 200px;
-    background: #cacaca;
-    height: 800px;
-}
-
-.nav-left, .nav-right {
-    background:red;
-    height: 800px;
-    width: 60px;
-}*/
 body{
     margin:0;
     padding:0;
 }
 .whole-content {
-    border:1px solid purple;
+    /*    border:1px solid purple;*/
     width:100%;
     height: 800px;
     text-align:left;
     position:relative;
 }
-
 .panel-left {
-    border:2px solid green;
+    /*    border:2px solid green;*/
     float:left;
     margin:0;
 }
 .menu-left{
     float: left;
     width: 200px;
-    background:#b2dba1;
+    background:#455363;
 }
 .nav-left{
     float: right;
     width: 60px;
-    background:plum;
+    background:#989898;
 }
 .panel-right {
     position:absolute;
     top:0;
     right:0;
-    border:2px solid green;
     margin:0;
-
 }
 .menu-right{
     float:right;
     width: 200px;
-    /*    background:#060;*/
-    background:#b2dba1;
-
+    background:#455363;
 }
 .nav-right{
     float:left;
     width: 60px;
-    background:plum;
+    background:#989898;
 }
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
 }
-
 .main-content {
-    border:2px solid blue;
+    /*    border:2px solid blue;*/
     width:72.9%;
     margin:0 0 0 260px;
 }
 .menu-header{
-    background: green;
+    background: #181D23;
     margin-top: 20px;
     position: relative;
 }
-
 .banner-big {
     height: 63px;
 }
-
 .banner-md {
     height: 50px;
 }
 .menu-header-left {
-    background: green;
+    background: #181D23;
     height:100%;
     width: 7px;
     position:absolute;
@@ -114,7 +70,7 @@ body{
 .triangle-topleft {
     width: 0;
     height: 0;
-    border-top: 7px solid green;
+    border-top: 7px solid #181D23;
     border-right: 7px solid transparent;
     right: -7px;
     bottom: -7px;
@@ -124,7 +80,8 @@ body{
     color: #0066A4;
 }
 .icon-online {
-    color: #4cae4c;
+    /*    color: #4cae4c;*/
+    color: greenyellow;
 }
 .profile-image {
     padding-left: 10px;
@@ -133,15 +90,9 @@ body{
     width: 50px;
     margin-top: -19px;
 }
-
-.menu-item {
-/*    display: block;
-    margin-bottom: 0;*/
-}
 .menu-item ul {
     list-style: none;
     display: inline-block;
-/*    margin-bottom: -10px;*/
     padding-left: 2px;
     padding-top: 10px;
 }
@@ -151,48 +102,123 @@ body{
     margin-top: 10px;
     position: absolute;
 }
-/*.profile-name {   
-    float: right;
-    margin-top: -50px;
-    margin-right: 50px;
-}*/
-/*
-#info-image{
-    float: right;
-    margin-right: 130px;
-    margin-top:0;
-    width: 12px;
-}
-.profile-name {
-    float: right;
-    margin-right: 40px;
-    margin-top: 10px;
-}
-.info-name{
-    float: right;
-    margin-right: 40px;
-    margin-top: 15px;
-}*/
-/*.menu-myworld{
-    background: green;
-    height: 50px;
-    margin: 50px -7px 0 0;
-    position: relative;
-}
-.menu-yourworld{
-    background: green;
-    height: 50px;
-    margin: 280px -7px 0 0;
-    position: relative;
-}*/
 
-/*#triangle-topleft {
-    width: 0;
-    height: 0;
-    border-top: 7px solid green;
-    border-right: 7px solid transparent;
-    float: right;
-    margin-right: -7px;
+/*ADD MORE CSS*/
+.title-bar-right{
+    color: white;
+    margin-top:20px;
+    background:#181d23;
     position: relative;
 }
-*/
+
+.banner-sm {
+    height: 30px;
+}
+.triangle-top-right{
+    top: 0;
+    height: 100%;
+    left: -7px;
+    width: 7px;
+    background:#181d23;
+    position:absolute;
+}
+.title-bar-right .span-right{
+    float: right;
+    position:relative;
+    top:10px;
+    margin-right: 10px;
+}
+.title-bar-right .span-left{
+    font-size: 14px;
+    float:left;
+    position: relative;
+    top:10px;
+    margin-left:10px;   
+}
+.title-bar-right .span-left i{
+    position: relative;
+    top: 3px;
+    left:-3px;   
+}
+.title-bar-right .span-right a{
+    color: white;
+}
+.contact-list{
+    margin-top: 15px;
+    height:200px;
+}
+.menu-right .contact-list ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.menu-right .contact-list ul a{
+    display:block;
+    width: 100%;
+    color:#FFFFFF;
+    padding:10px 10px 10px 40px;
+    text-decoration:none;
+}
+.menu-right .contact-list ul li{
+    border:1px solid #ffffff;
+    border-style: none;
+    border-bottom-style:solid;
+}
+.menu-right .contact-list ul li:first-child{
+    border:1px solid #ffffff;
+    border-left-style: none;
+    border-right-style: none;
+}
+.user-online{
+    margin-top: 15px;
+    height:200px;  
+}
+.user-online ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;  
+}
+.user-online ul li{
+    border:1px solid #ffffff;
+    border-style: none;
+    border-bottom-style:solid;
+}
+.user-online ul li .div-avatar img{ 
+    float:left;
+    width: 35px;
+    height:35px;
+}
+.user-online ul li .div-avatar{
+    display:block;
+    height: 45px;
+    width: 100%;
+    color:#FFFFFF;
+    padding:5px 10px 10px 10px;
+}
+.user-online ul li .group-sm-link{
+
+}
+.user-online ul li .div-avatar i{
+    color: greenyellow;
+    position:relative;
+    top: 25px;
+    left:-5px;
+}
+.user-online ul li:first-child{
+    border:1px solid #ffffff;
+    border-left-style: none;
+    border-right-style: none;
+}
+.triangle-top-right-conner{
+    width:0;
+    height:0;
+    border-right:7px solid #222222;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: -7px;
+}
+.panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
+    height:800px;
+}
+
