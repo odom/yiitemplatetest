@@ -73,7 +73,10 @@
                                 <img src="../images/avatar.png"/>
                             <i class="fa fa-circle fa-online"></i>
                             <span>Floophie</span>
-                            <i class=""></i>
+                            <i class="fa fa-phone"></i>
+                            <i class="fa fa-eye"></i>
+                            <i class="fa fa-comment-o"></i>
+                            <i class="fa fa-info-circle"></i>
                             </div>
                         </li>
                     </ul>
