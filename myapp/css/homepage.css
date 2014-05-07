@@ -146,7 +146,7 @@ body{
     color: white;
 }
 .nav-list{
-    margin-top: 10px;
+    margin-top: 18px;
 
 }
 .nav-list-top{
@@ -291,7 +291,7 @@ body{
    border-top-style: none;
    border-left-style: none;
    border-right-style: none;
-   height:18%;
+   height:17%;
 }
 .nav-list-bordermiddle{
    border:1px solid #6a717c;
@@ -328,14 +328,17 @@ body{
 }
 
  .popover{
-     margin-top: 30px;
+     margin-top: 63px;
 }
 
 .popover.left {
     margin-left: -18px;
 }
 .popover.left > .arrow{
-    margin-top: -40px;
+    margin-top: -68px;
+}
+.popover-title{
+    background-color: #FFF;
 }
 
 .select-room-list ul{

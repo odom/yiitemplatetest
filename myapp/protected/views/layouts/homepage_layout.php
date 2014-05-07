@@ -119,15 +119,15 @@
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
                         <ul>
+                            <li><a href="#"><img src="../images/newRoom.png"/></a></li>
                             <li>
                                 <a href="#" id="popup-select-room" data-placement="right">
-                                    <img src="../images/newRoom.png"/>
+                                    <img src="../images/changeRoom.png"/>
                                 </a>
                             </li>
-                            <li><a href="#"><img src="../images/changeRoom.png"/></a></li>
                         </ul>
                     </div>
-                  <div class="nav-list nav-list-bordermiddle">
+                    <div class="nav-list nav-list-bordermiddle">
                         <ul>
                             <li><a href="#" class="img-list"><img src="../images/multimedia.png"/></a></li> 
                             <li><a href="#"><img src="../images/copy.png"/></a></li>
@@ -176,16 +176,16 @@
                             </li>
                             <li><a href="#"><img src="../images/displayCanvas.png"/></a></li>
                             <li><a href="#"><img src="../images/displayThumbnails.png"/></a></li>
-                              <li><a href="#"><img src="../images/displayList.png"/></a></li>
-                             
-                            
+                            <li><a href="#"><img src="../images/displayList.png"/></a></li>
+
+
                         </ul>
                     </div>
-                  <div class="nav-list">
+                    <div class="nav-list">
                         <ul>
                             <li><a href="#"><img src="../images/cosync.png"/></a></li>
                             <li><a href="#"><img src="../images/dashboard.png"/></a></li>
-                             <li><a href="#"><img src="../images/whiteboard.png"/></a></li>                            
+                            <li><a href="#"><img src="../images/whiteboard.png"/></a></li>                            
                         </ul>
                     </div>
                 </div>
@@ -206,18 +206,18 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                <div class="div-avatar">
-                                    <img src="../images/avatar.png"/>
-                                    <span class="list-view">Floophie</span>
-                                </div>
+                                    <div class="div-avatar">
+                                        <img src="../images/avatar.png"/>
+                                        <span class="list-view">Floophie</span>
+                                    </div>
                                 </a>
                             </li>
                             <li>
-                               <a href="#">
-                                <div class="div-avatar">
-                                    <img src="../images/avatar.png"/>
-                                    <span class="list-view">Floophie</span>
-                                </div>
+                                <a href="#">
+                                    <div class="div-avatar">
+                                        <img src="../images/avatar.png"/>
+                                        <span class="list-view">Floophie</span>
+                                    </div>
                                 </a> 
                             </li>
                         </ul>
@@ -255,8 +255,8 @@
                 </div>
             </div>
         </div>
-             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-             <script src="<?php echo Yii::app()->request->baseUrl;?>/js/bootstrap.js"></script>
-             <script src="<?php echo Yii::app()->request->baseUrl;?>/js/popup.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
     </body>
 </html>
