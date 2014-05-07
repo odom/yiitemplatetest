@@ -50,7 +50,6 @@ body{
     width:72.9%;
     margin:0 0 0 260px;
 }
-/*Updated.....................................*/
 .menu-header{
     background: #181D23;
     position: relative;
@@ -189,7 +188,6 @@ body{
     float:left;
     width: 35px;
 }
-/*Updated......................................*/
 .list-view-group ul li .div-avatar{
     display:block;
     height: 45px;
@@ -309,6 +307,7 @@ body{
 }
 .list-chang-background ul a{
     display:block;
+    font-size: 12px;
     padding-top:5px;
     padding-bottom:5px;
     text-decoration:none;
@@ -324,6 +323,8 @@ body{
 .title-popup{
     border-bottom:1px solid #000;
     padding-bottom:2px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
  .popover{
@@ -338,6 +339,8 @@ body{
 }
 .popover-title{
     background-color: #FFF;
+    text-align: center;
+    width: 100%
 }
 
 .select-room-list ul{
@@ -346,7 +349,8 @@ body{
     padding:0;
 }
 
-.select-room-list ul a{
+.select-room-list ul li{
+    font-size: 12px;
     display:block;
     padding-top:5px;
     padding-bottom:5px;
@@ -362,4 +366,56 @@ body{
 }
 .social-share a{
     padding:2px;
+}
+.select-room-list ul li img{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-left:20px;
+}
+.select-room-list ul li input,.select-room-list ul li span{
+    padding-left: 5px;
+}
+.chang-them-list ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;   
+}
+.chang-them-list ul a{
+    display:block;
+    padding: 3px;
+    width: 62px;
+    height: 20px;
+    text-decoration:none;
+    text-align:center;
+    border: 1px solid white;
+}
+.chang-them-list ul li{
+    border: 1px solid black;
+    width: 64px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.color-black{
+    background: #181d23;
+}
+.color-blue{
+    background:#0e3b75;
+}
+.color-green{
+    background:#0c7734;
+}
+.color-orange{
+    background:#e5a62b;
+}
+.color-red{
+    background:#df2323;
+}
+.color-pink{
+    background:#7535c5;
+}
+.color-white{
+    background:#e3e3e3;
 }
