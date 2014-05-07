@@ -119,7 +119,11 @@
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
                         <ul>
-                            <li><a href="#"><img src="../images/newRoom.png"/></a></li>
+                            <li>
+                                <a href="#" id="popup-select-room" data-placement="right">
+                                    <img src="../images/newRoom.png"/>
+                                </a>
+                            </li>
                             <li><a href="#"><img src="../images/changeRoom.png"/></a></li>
                         </ul>
                     </div>
@@ -141,7 +145,7 @@
             </div>
             <div class="main-content">
                 <?php //echo $content; ?>
-                                <div class="chang_background_box hidden">
+                    <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
                             <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
@@ -150,6 +154,15 @@
                         </ul>
                     </div>
                 </div>
+                <div class="select-room-box hidden">
+                   <div class="select-room-list">
+                        <ul>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Wood</span></a></li>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Leather</span></a></li>
+                        </ul>
+                    </div>  
+                </div>
             </div>
             <div class="panel-right">
                 <div class="nav-right">
@@ -157,7 +170,7 @@
                         <ul>
                             <li><a href="#"><img src="../images/share.png"/></a></li>
                             <li>
-                                <a href="#" id="popup-changbackground" data-placement="left" data-container='body'>
+                                <a href="#" id="popup-changbackground" data-placement="left">
                                     <img src="../images/changeBackground.png"/>
                                 </a>
                             </li>

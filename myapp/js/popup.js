@@ -7,7 +7,7 @@
 $(document).ready(function(e) {
     $("#popup-changbackground").popover({
         html: true,
-        title: '<span class="title-popup">Chang Background</span><a class="close" href="#");">&nbsp;&times;</a>',
+        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
         content: function() {
             return $(".chang_background_box").html();
         }
@@ -18,5 +18,17 @@ $(document).ready(function(e) {
             $("#popup-changbackground").popover('hide');
         }
     })
+    
+  $("#popup-select-room").click(function(){
+      alert(11111111111111);
+  });
+          
+//            popover({
+//        html: true,
+//        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
+//        content: function() {
+//            return $(".select-room-box").html();
+//        }
+//    });
 
 });
