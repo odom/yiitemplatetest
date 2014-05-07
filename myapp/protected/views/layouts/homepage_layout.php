@@ -116,7 +116,28 @@
                     </div>
                     <span class="direction-left"><a href="#"><i class="fa fa-angle-double-left"></i></a></span>
                 </div>
-                <div class="nav-left"></div>
+                <div class="nav-left">
+                    <div class="nav-list nav-list-bordertop">
+                        <ul>
+                            <li><a href="#"><img src="../images/newRoom.png"/></a></li>
+                            <li><a href="#"><img src="../images/changeRoom.png"/></a></li>
+                        </ul>
+                    </div>
+                  <div class="nav-list nav-list-bordermiddle">
+                        <ul>
+                            <li><a href="#" class="img-list"><img src="../images/multimedia.png"/></a></li> 
+                            <li><a href="#"><img src="../images/copy.png"/></a></li>
+                            <li><a href="#"><img src="../images/cut.png"/></a></li>
+                            <li><a href="#"><img src="../images/paste.png"/></a></li>
+                            <li><a href="#"><img src="../images/palette.png"/></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-list">
+                        <ul>
+                            <li><a href="#" class="img-list"><img src="../images/trash.png"/></a></li>                             
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="main-content">
                 <?php //echo $content; ?>

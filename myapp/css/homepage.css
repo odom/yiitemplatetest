@@ -14,7 +14,6 @@ body{
     float:left;
     margin:0;
 }
-/*Updated*/
 .menu-left{
     float: left;
     width: 200px;
@@ -46,16 +45,16 @@ body{
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
 }
-/*Updated*/
 .main-content {
     border:2px solid #737373;
     width:72.9%;
     margin:0 0 0 260px;
 }
+/*Updated.....................................*/
 .menu-header{
     background: #181D23;
-    margin-top: 20px;
     position: relative;
+    margin: 20px auto 45px auto;
 }
 .banner-big {
     height: 63px;
@@ -107,8 +106,6 @@ body{
     position: absolute;
     color: white;
 }
-
-/*ADD MORE CSS*/
 .title-bar-right{
     color: white;
     margin-top:20px;
@@ -165,9 +162,7 @@ body{
     padding: 0;
 }
 .nav-list ul a{
-    /*font-size: 18px;*/
     display:block;
-    color:white;
     padding-top: 20px;
     text-decoration:none;
     text-align: center;
@@ -175,8 +170,6 @@ body{
 .nav-list ul img{
     width: 25px;
 }
-
-/*Updated*/
 .list-view-group{
     margin-top: 10px;
     height:225px;  
@@ -187,7 +180,6 @@ body{
     margin:0;
     padding:0;  
 }
-/* chang color border*/
 .list-view-group ul li{
     border:1px solid #6a717c;
     border-style: none;
@@ -196,13 +188,13 @@ body{
 .list-view-group ul li .div-avatar img{ 
     float:left;
     width: 35px;
-/*    height:35px;*/
 }
+/*Updated......................................*/
 .list-view-group ul li .div-avatar{
     display:block;
     height: 45px;
     width: 100%;
-    color:#FFFFFF;
+    color: #181D23;
     padding:5px 10px 10px 20px;
 }
 .list-view-group ul li .div-avatar .group-sm-link{
@@ -249,7 +241,6 @@ body{
     color: #181D23;
     line-height: 35px;
 }
-/*Sopheak add more css*/
 .search-image{
     width: 14px;
     margin-left: 5px;
@@ -258,11 +249,11 @@ body{
     padding-left: 10px;
     color: #181D23;
     line-height: 35px;
-}/*
-*/.list-view-group ul li a{
+}
+.list-view-group ul li a{
     text-decoration: none;
-}/*
-*/
+    
+}
 .list-view-group ul li .div-avatar i{
     color: greenyellow;
     position:relative;
@@ -277,7 +268,7 @@ body{
     color: #FFF;
 }
 .direction-left{
-    top: 44%;
+    top: 50%;
     background:#455363;
     position:absolute;
     height:20px;
@@ -287,4 +278,25 @@ body{
     padding:3px;
     border-radius:0 5px 5px 0;
 }
-
+/*Add more css*/
+.nav-list ul li .img-list{
+    display:block;
+    padding: 10px 0 10px 0;
+    text-decoration:none;
+    text-align: center;
+    margin-top: 42px;
+}
+.nav-list-bordertop{
+   border:1px solid #6a717c;
+   border-top-style: none;
+   border-left-style: none;
+   border-right-style: none;
+   height:18%;
+}
+.nav-list-bordermiddle{
+   border:1px solid #6a717c;
+   border-top-style: none;
+   border-left-style: none;
+   border-right-style: none;
+   height:62%;
+}
