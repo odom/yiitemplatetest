@@ -141,14 +141,27 @@
             </div>
             <div class="main-content">
                 <?php //echo $content; ?>
+                                <div class="chang_background_box hidden">
+                    <div class="list-chang-background">
+                        <ul>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Wood</span></a></li>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Leather</span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="panel-right">
                 <div class="nav-right">
                     <div class="nav-list nav-list-top">
                         <ul>
                             <li><a href="#"><img src="../images/share.png"/></a></li>
-                            <li><a href="#"><img src="../images/changeBackground.png"/></a></li>
-                             <li><a href="#"><img src="../images/displayCanvas.png"/></a></li>
+                            <li>
+                                <a href="#" id="popup-changbackground" data-placement="left" data-container='body'>
+                                    <img src="../images/changeBackground.png"/>
+                                </a>
+                            </li>
+                            <li><a href="#"><img src="../images/displayCanvas.png"/></a></li>
                             <li><a href="#"><img src="../images/displayThumbnails.png"/></a></li>
                               <li><a href="#"><img src="../images/displayList.png"/></a></li>
                              
@@ -228,6 +241,9 @@
                     <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
                 </div>
             </div>
-        </div>          
+        </div>
+             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+             <script src="<?php echo Yii::app()->request->baseUrl;?>/js/bootstrap.js"></script>
+             <script src="<?php echo Yii::app()->request->baseUrl;?>/js/popup.js"></script>
     </body>
 </html>
