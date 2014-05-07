@@ -8,7 +8,7 @@ $(document).ready(function(e) {
     $("#popup-changbackground").popover({
         html: true,
 //        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
-        title: '<span class="title-popup">Change Background</span>',
+        title: '<span class="title-popup">Change background</span>',
         content: function() {
             return $(".chang_background_box").html();
         }
@@ -22,7 +22,7 @@ $(document).ready(function(e) {
     
   $("#popup-select-room").popover({
         html: true,
-        title: '<span class="title-popup">Select Room</span>',
+        title: '<span class="title-popup">Select room</span>',
         content: function() {
             return $(".select-room-box").html();
         }
@@ -31,7 +31,7 @@ $(document).ready(function(e) {
     
       $("#popup-change-them").popover({
         html: true,
-        title: '<span class="title-popup">Change Them</span>',
+        title: '<span class="title-popup">Change theme</span>',
         content: function() {
             return $(".chang-them-box").html();
         }
