@@ -278,7 +278,6 @@ body{
     padding:3px;
     border-radius:0 5px 5px 0;
 }
-/*Add more css*/
 .nav-list ul li .img-list{
     display:block;
     padding: 10px 0 10px 0;
@@ -353,4 +352,14 @@ body{
     padding-bottom:5px;
     text-decoration:none;
     text-align:left;
+}
+.social-share{
+    float: right;
+    margin: 8px 20px auto auto; 
+}
+.social-share img{
+    width: 20px;
+}
+.social-share a{
+    padding:2px;
 }

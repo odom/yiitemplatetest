@@ -145,6 +145,14 @@
             </div>
             <div class="main-content">
                 <?php //echo $content; ?>
+                
+                <div class="social-share">
+                    <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png" /></a>
+                    <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
+                    <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
+                    <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
+                </div>
+                
                     <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
