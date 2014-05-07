@@ -133,7 +133,11 @@
                             <li><a href="#"><img src="../images/copy.png"/></a></li>
                             <li><a href="#"><img src="../images/cut.png"/></a></li>
                             <li><a href="#"><img src="../images/paste.png"/></a></li>
-                            <li><a href="#"><img src="../images/palette.png"/></a></li>
+                            <li>
+                                <a href="#" id="popup-change-them" data-placement="right">
+                                    <img src="../images/palette.png"/>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="nav-list">
@@ -157,12 +161,28 @@
                 <div class="select-room-box hidden">
                    <div class="select-room-list">
                         <ul>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Wood</span></a></li>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Leather</span></a></li>
+                            <li><input type="radio" name="room" value="keysaw"/> <span class="popup-list">Keysaw Room</span><img src="../images/displayCanvas.png"/></li>
+                            <li><input type="radio" name="room" value="test"/> <span class="popup-list">Test Room</span><img src="../images/displayCanvas.png"/></li>
+                            <li><input type="radio" name="room" value="busines"/> <span class="popup-list">Business Room</span><img src="../images/displayCanvas.png"/></li>
+                            <li><input type="radio" name="room" value="floophie"/> <span class="popup-list">Floophie Room</span><img src="../images/displayCanvas.png"/></li>
                         </ul>
                     </div>  
                 </div>
+                <div class="chang-them-box hidden">
+                <div class="chang-them-list">
+                   <ul>
+                            <li><div class="clor-border"><a href="#" class="color-black"></div></a></li>
+                            <li><span><a href="#" class="color-blue"></span></a></li>
+                            <li><a href="#" class="color-green"></a></li>
+                            <li><a href="#" class="color-orange"></a></li>
+                            <li><a href="#" class="color-red"></a></li>
+                            <li><a href="#" class="color-pink"></a></li>
+                            <li><a href="#" class="color-white"></a></li>
+                  </ul>
+                </div>
+                    
+                </div>
+
             </div>
             <div class="panel-right">
                 <div class="nav-right">

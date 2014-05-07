@@ -20,16 +20,21 @@ $(document).ready(function(e) {
 //        }
 //    })
     
-  $("#popup-select-room").click(function(){
-      alert(11111111111111);
-  });
-          
-//            popover({
-//        html: true,
-//        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
-//        content: function() {
-//            return $(".select-room-box").html();
-//        }
-//    });
+  $("#popup-select-room").popover({
+        html: true,
+        title: '<span class="title-popup">Select Room</span>',
+        content: function() {
+            return $(".select-room-box").html();
+        }
+    });
+    
+    
+      $("#popup-change-them").popover({
+        html: true,
+        title: '<span class="title-popup">Change Them</span>',
+        content: function() {
+            return $(".chang-them-box").html();
+        }
+    });
 
 });
