@@ -149,15 +149,45 @@
             </div>
             <div class="main-content">
                 <?php //echo $content; ?>
-                
                 <div class="social-share">
                     <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png" /></a>
                     <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
                     <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
                     <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
                 </div>
-                
-                    <div class="chang_background_box hidden">
+
+                <!--Create new room-->
+                <div class="create-new-room">
+                    <div class="room-header">
+                        <span>Create new room</span>
+                    </div>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group col-sm-12 col-sm-offset-3">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Room name</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Enter room name">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12 col-sm-offset-3">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Storage</label>
+                            <select class="form-control">
+                                <option>Local storage</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>                       
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Create</button>
+                                <button type="submit" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>               
+
+                <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
                             <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
@@ -167,7 +197,7 @@
                     </div>
                 </div>
                 <div class="select-room-box hidden">
-                   <div class="select-room-list">
+                    <div class="select-room-list">
                         <ul>
                             <li><input type="radio" name="room" value="keysaw"/> <span class="popup-list">Keysaw Room</span><img src="../images/displayCanvas.png"/></li>
                             <li><input type="radio" name="room" value="test"/> <span class="popup-list">Test Room</span><img src="../images/displayCanvas.png"/></li>
@@ -177,8 +207,8 @@
                     </div>  
                 </div>
                 <div class="chang-them-box hidden">
-                <div class="chang-them-list">
-                   <ul>
+                    <div class="chang-them-list">
+                        <ul>
                             <li><div class="clor-border"><a href="#" class="color-black"></div></a></li>
                             <li><span><a href="#" class="color-blue"></span></a></li>
                             <li><a href="#" class="color-green"></a></li>
@@ -186,9 +216,9 @@
                             <li><a href="#" class="color-red"></a></li>
                             <li><a href="#" class="color-pink"></a></li>
                             <li><a href="#" class="color-white"></a></li>
-                  </ul>
-                </div>
-                    
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
