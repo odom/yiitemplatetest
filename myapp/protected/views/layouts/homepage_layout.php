@@ -160,9 +160,9 @@
                     <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Wood</span></a></li>
-                            <li><a href="#"><img src="../images/displayCanvas.png"/><span class="popup-list">Leather</span></a></li>
+                            <li><a href="#" class="default"><img src="../images/displayCanvas.png"/><span class="popup-list">Default</span></a></li>
+                            <li><a href="#" class="wood"><img src="../images/displayCanvas.png"/><span class="popup-list">Wood</span></a></li>
+                            <li><a href="#" class="leather"><img src="../images/displayCanvas.png"/><span class="popup-list">Leather</span></a></li>
                         </ul>
                     </div>
                 </div>

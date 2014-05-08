@@ -5,7 +5,7 @@
 
 
 $(document).ready(function(e) {
-    $("#popup-changbackground").popover({
+   $changeBackground = $("#popup-changbackground").popover({
         html: true,
 //        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
         title: '<span class="title-popup">Change background</span>',
@@ -13,6 +13,26 @@ $(document).ready(function(e) {
             return $(".chang_background_box").html();
         }
     });
+     $changeBackground.on('shown.bs.popover', function () {
+        $(".wood").click(function(){
+            $(".main-content").css({"background":"url('../images/wood.jpg') no-repeat scroll center"});
+        });
+        $(".leather").click(function(){
+            $(".main-content").css({"background":"url('../images/leather.jpg') no-repeat scroll center"}); 
+        });
+        $(".default").click(function(){
+            $(".main-content").css({"background":"url('../images/default.jpg') no-repeat scroll center"});  
+        });
+    });
+    
+      $("#popup-change-them").popover({
+        html: true,
+        title: '<span class="title-popup">Change theme</span>',
+        content: function() {
+            return $(".chang-them-box").html();
+        }
+    });
+
 //    $(document).click(function(e) {
 //
 //        if ($(e.target).is('.close')) {
@@ -27,14 +47,7 @@ $(document).ready(function(e) {
             return $(".select-room-box").html();
         }
     });
-    
-    
-      $("#popup-change-them").popover({
-        html: true,
-        title: '<span class="title-popup">Change theme</span>',
-        content: function() {
-            return $(".chang-them-box").html();
-        }
-    });
+ 
+
 
 });
