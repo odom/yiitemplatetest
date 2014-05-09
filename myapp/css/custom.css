@@ -19,14 +19,7 @@
  }
 
 /*### Cut From Register Form CSS ###*/
-body.register_page{
-	background:url(../images/tropical_dock-wallpaper-1366x768.jpg) no-repeat scroll center;	
-}
-
 .register, .login {
-	height:400px;
-	box-shadow:0 1px 10px #888888;
-	background:rgba(40, 132, 112, 0.95);
 	margin-top: 60px;
 }
 
@@ -63,4 +56,38 @@ body.register_page{
 
 .footernav.nav > li > a {
     padding: 12px 35px;
+}
+
+html {
+	height: 100%;
+}
+
+.register, .loginform {
+	width: 600px;
+	height:400px;
+	background:rgba(40, 132, 112, 0.95);
+	margin: 0;
+	padding: 0;
+}
+.carousel-inner .item {
+	width: 100%;
+	height: 100%;
+}
+#carousel-background img {
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	position: absolute;
+	bottom: 60px;
+}
+
+#cboxOverlay {
+	background: none;
+}
+
+#cboxLoadedContent, #cboxContent   {
+	background: none;
+	border: 0;
 }

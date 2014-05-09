@@ -1,5 +1,5 @@
-<div clas="row">
-	<div class="register  col-sm-offset-3 col-sm-6">
+
+	<div class="register">
         <form role="form">
             <h3>Create an Acount</h3>
             <div class="text-center">
@@ -20,4 +20,3 @@
             </div>
         </form>
     </div>
-</div>
