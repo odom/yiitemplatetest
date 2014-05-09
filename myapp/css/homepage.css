@@ -419,3 +419,117 @@ body{
 .color-white{
     background:#ffffff;
 }
+
+.room-conner-right{
+    background: #181D23;
+    height: 16%;
+    width: 7px;
+    position:absolute;
+    right: -7px;
+    top: 0;
+}
+.room-conner-left{
+    top: 0;
+    height: 16%;
+    left: -7px;
+    width: 7px;
+    background: #181D23;
+    position:absolute;
+}
+.triangle-topright-room{
+    width:0;
+    height:0;
+    border-right:7px solid #222222;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: -7px;
+    top:16%;
+}
+.triangle-topleft-room {
+    width: 0;
+    height: 0;
+    border-top: 7px solid #181D23;
+    border-right: 7px solid transparent;
+    right: -7px;
+    bottom: -7px;
+    position: absolute;
+    top:16%;
+}
+
+
+.form-control{
+    height: 30px;
+/*    font-size: 10px;*/
+     padding: 4px 12px;
+}
+.form-group{
+    margin-bottom: 0;
+}
+.form-horizontal{
+    margin-top: 32px;
+}
+.storage{
+    margin-bottom: 20px;
+}
+.form-group button{
+    float: right;
+    margin-right: 44px;
+    font-size: 12px;
+    color: white;
+    background: #181d23;
+}
+.form-group .btn-default-create{
+    margin-right: 10px;
+}
+.form-horizontal .glyphicon-remove{
+    float: right;
+    top: -22px;
+    margin-right: 4px;
+}
+.form-horizontal .control-label{
+    font-size: 13px;
+}
+#dialog-modal{
+    /*visibility: hidden;*/
+    display: none;
+}
+/*UI css..............................*/
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 0;
+}
+.ui-dialog .ui-dialog-title {
+    text-align: center;
+    color: white;
+}   
+.ui-dialog .ui-dialog-content {
+    background: #455263;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 12px;
+
+}
+.ui-widget-header {
+    background: #181d23;
+    border: none;
+}
+.ui-dialog-titlebar-close{
+    visibility: hidden;
+}
+
+.ui-dialog-content{
+  position: relative;
+  width: 700px;
+}
+
+

@@ -15,16 +15,17 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />  
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
         <link rel="stylesheet" type="text/css" href="" id="changetheme" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" />
-
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
     <body class="homepage">    
         <div class="whole-content">
+            <!--Start Panel Left-->
             <div class="panel-left">
                 <div class="menu-left">
                     <div class="menu-header banner-big">
@@ -115,13 +116,13 @@
                             </li>                           
                         </ul>
                     </div>
-                    <span class="direction-left"><a href="#" id="directionleft"><i class="fa fa-angle-double-left"></i></a></span>
+                    <span class="direction-left"><a href="#"><i class="fa fa-angle-double-left"></i></a></span>
                 </div>
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="#" id="create_room">
                                     <img src="../images/newRoom.png" img-over="../images/newRoom_hover.png" img-mouseout="../images/newRoom.png" img-click="../images/newRoom_click.png"/>
                                 </a>
                             </li>
@@ -172,17 +173,61 @@
                     </div>
                 </div>
             </div>
+            <!--End Panel Left-->
+
+            <!--Start Main Content-->
             <div class="main-content">
                 <?php //echo $content; ?>
-                
+
+                <!--Start Social Share (fb, twitter,...)-->
                 <div class="social-share">
                     <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png" /></a>
                     <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
                     <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
                     <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
                 </div>
-                
-                    <div class="chang_background_box hidden">
+                <!--End Social Share (fb, twitter,...)-->                
+
+                <!--Dialog create new room-->
+                <div id="dialog-modal">
+                    <!--Start-->
+                    <span class="room-conner-left"></span>
+                    <i class="triangle-topright-room"></i>
+                    <span class="room-conner-right"></span>
+                    <i class="triangle-topleft-room"></i>                 
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group col-sm-12 col-sm-offset-3">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Room name</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Enter room name">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12 col-sm-offset-3 storage">
+                            <label for="inputPassword3" class="col-sm-4 control-label">Storage</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>Local storage</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>                         
+                        </div>                       
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-default-create">Create</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--End-->
+                </div>
+                <!--End Dialog create new room-->
+
+                <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
                             <li>
@@ -206,8 +251,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="select-room-box hidden">
-                   <div class="select-room-list">
+                    <div class="select-room-list">
                         <ul>
                             <li><input type="radio" name="room" value="keysaw"/> <span class="popup-list">Keysaw Room</span><img src="../images/displayCanvas.png"/></li>
                             <li><input type="radio" name="room" value="test"/> <span class="popup-list">Test Room</span><img src="../images/displayCanvas.png"/></li>
@@ -216,9 +262,10 @@
                         </ul>
                     </div>  
                 </div>
+
                 <div class="chang-them-box hidden">
-                <div class="chang-them-list">
-                   <ul>
+                    <div class="chang-them-list">
+                        <ul>
                             <li><a href="#" data-css="/css/theme/theme_default.css" class="color-black"></a></li>
                             <li><a href="#" data-css="/css/theme/theme_blue.css" class="color-blue"></a></li>
                             <li><a href="#" data-css="/css/theme/theme_green.css" class="color-green"></a></li>
@@ -226,12 +273,14 @@
                             <li><a href="#" data-css="/css/theme/theme_red.css" class="color-red"></a></li>
                             <li><a href="#" data-css="/css/theme/theme_puple.css" class="color-pink"></a></li>
                             <li><a href="#" data-css="/css/theme/theme_white.css" class="color-white"></a></li>
-                  </ul>
-                </div>
-                    
+                        </ul>
+                    </div>                   
                 </div>
 
             </div>
+            <!--End Main Content-->
+
+            <!--Start Panel Right-->
             <div class="panel-right">
                 <div class="nav-right">
                     <div class="nav-list nav-list-top">
@@ -347,13 +396,17 @@
                             </li>
                         </ul>
                     </div>
-                    <span class="direction-right"><a href="#" id="directionright"><i class="fa fa-angle-double-right"></i></a></span>
+                    <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
                 </div>
             </div>
+            <!--End Panel Right-->
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cookie.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
+
+
     </body>
 </html>

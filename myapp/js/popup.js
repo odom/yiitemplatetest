@@ -7,11 +7,13 @@
 $(document).ready(function(e) {
     /* jquery apply theme from cookie*/
     $("#changetheme").attr("href", $.cookie('mapring-afinos-theme'));
-    $(".main-content").css({"background": "url('"+$.cookie('mapring-afinos-background')+"') no-repeat scroll center"});
+    $(".main-content").css({
+        "background": "url('"+$.cookie('mapring-afinos-background')+"') no-repeat scroll center"
+        });
 
     $changeBackground = $("#popup-changbackground").popover({
         html: true,
-//        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
+        //        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
         title: '<span class="title-popup">Change background</span>',
         content: function() {
             return $(".chang_background_box").html();
@@ -20,8 +22,13 @@ $(document).ready(function(e) {
 
     $changeBackground.on('shown.bs.popover', function() {
         $(".list-chang-background a").click(function() {
-           $(".main-content").css({"background": "url('"+$(this).children('img').data('css')+"') no-repeat scroll center"});
-           $.cookie('mapring-afinos-background', $(this).children('img').data("css"), {expires: 30,path:'/'});
+            $(".main-content").css({
+                "background": "url('"+$(this).children('img').data('css')+"') no-repeat scroll center"
+                });
+            $.cookie('mapring-afinos-background', $(this).children('img').data("css"), {
+                expires: 30,
+                path:'/'
+            });
         });
     });
 
@@ -36,13 +43,14 @@ $(document).ready(function(e) {
     $changeTheme.on('shown.bs.popover', function() {
         $('.chang-them-list a').click(function() {
             $("#changetheme").attr("href", $(this).data('css'));
-            $.cookie('mapring-afinos-theme', $(this).data('css'), {expires: 30, path:'/'});
+            $.cookie('mapring-afinos-theme', $(this).data('css'), {
+                expires: 30, 
+                path:'/'
+            });
         });
        
        
     });
-
-
 
     $("#popup-select-room").popover({
         html: true,
@@ -51,20 +59,32 @@ $(document).ready(function(e) {
             return $(".select-room-box").html();
         }
     });
+ 
+    $("#create_room").click(function(){
+        $( "#dialog-modal" ).dialog({
+            height: 250,
+            width:  550,
+            title:'Create new room'
+        });
+        $("#dialog-modal").dialog("widget").draggable("option","containment",".main-content");
+        $( "#dialog-modal" ).resizable('disable').removeClass('ui-state-disabled');
+    });
+
+
     /* Mouseover action navigation right*/
-      $(".nav-list ul li a").mouseover(function(){
-          $(this).children('img').attr('src',$(this).children('img').attr('img-over'));
+    $(".nav-list ul li a").mouseover(function(){
+        $(this).children('img').attr('src',$(this).children('img').attr('img-over'));
 
     }); 
     
     /* Mouseout action navigation right*/
-   $(".nav-list ul li a").mouseout(function(){
-          $(this).children('img').attr('src',$(this).children('img').attr('img-mouseout'));
+    $(".nav-list ul li a").mouseout(function(){
+        $(this).children('img').attr('src',$(this).children('img').attr('img-mouseout'));
 
     });
     /* click action navigation right*/
-   $(".nav-list ul li a").click(function(){
-          $(this).children('img').attr('src',$(this).children('img').attr('img-click'));
+    $(".nav-list ul li a").click(function(){
+        $(this).children('img').attr('src',$(this).children('img').attr('img-click'));
 
     });
 }); //End of Document Ready
