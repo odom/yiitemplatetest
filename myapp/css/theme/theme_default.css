@@ -11,3 +11,8 @@
 .menu-left,.direction-left,.menu-right,.direction-right{
      background:#455263;
 }
+
+/*jquery ui css*/
+.ui-widget-header {
+    background: #181d23;
+}
