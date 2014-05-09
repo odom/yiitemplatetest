@@ -531,7 +531,7 @@ body{
 
 .room-conner-right{
     background: #181D23;
-    height: 16%;
+    height: 37px;
     width: 7px;
     position:absolute;
     right: -7px;
@@ -539,7 +539,7 @@ body{
 }
 .room-conner-left{
     top: 0;
-    height: 16%;
+    height: 37px;
     left: -7px;
     width: 7px;
     background: #181D23;
@@ -548,12 +548,12 @@ body{
 .triangle-topright-room{
     width:0;
     height:0;
-    border-right:7px solid #222222;
+    border-right:7px solid #181D23;
     border-bottom: 7px solid transparent;
     position: absolute;
     bottom: -7px;
     left: -7px;
-    top:16%;
+    top:37px;
 }
 .triangle-topleft-room {
     width: 0;
@@ -563,7 +563,7 @@ body{
     right: -7px;
     bottom: -7px;
     position: absolute;
-    top:16%;
+    top:37px;
 }
 
 
@@ -652,6 +652,7 @@ body{
 .ui-dialog{
     background: transparent;
     border: none;
+    padding: 10px;
 }
 
 
