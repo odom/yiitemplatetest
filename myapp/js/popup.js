@@ -47,7 +47,49 @@ $(document).ready(function(e) {
             return $(".select-room-box").html();
         }
     });
+    
+//    $( "#dialog-modal" ).dialog({
+//      autoOpen: false,
+//      show: {
+//        effect: "blind",
+//        duration: 1000
+//      },
+//      hide: {
+//        effect: "explode",
+//        duration: 1000
+//      }
+//    });
  
-
+$("#create_room").click(function(){
+  $( "#dialog-modal" ).dialog({
+      height: 250,
+      width:  550,
+      title:'Create new room'
+  });
+  $("#dialog-modal").dialog("widget").draggable("option","containment",".main-content");
+  $( "#dialog-modal" ).resizable('disable').removeClass('ui-state-disabled');
+});
 
 });
+
+//$(function() {
+//    $( "#dialog-modal" ).dialog({
+////      height: 140,
+////      modal: true
+//    });
+//  });
+
+//  $("#dialog-modal").each(function() { 
+//    alert("Hello"); 
+//});
+
+
+//$( "#create_room" ).click(function() {
+//  //alert( "Hello" );
+//  $( "#dialog-modal" ).dialog({
+//     height: 140,
+//     modal: true
+//    });
+//});
+
+  

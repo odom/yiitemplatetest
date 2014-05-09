@@ -15,15 +15,17 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" />
-
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />  
+        <!--<link rel="stylesheet" type="text/css" href="<?php //echo Yii::app()->request->baseUrl; ?>/css/jquery-ui-1.10.4.custom.css" />--> 
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
     <body class="homepage">    
         <div class="whole-content">
+            <!--Start Panel Left-->
             <div class="panel-left">
                 <div class="menu-left">
                     <div class="menu-header banner-big">
@@ -119,7 +121,8 @@
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
                         <ul>
-                            <li><a href="#"><img src="../images/newRoom.png"/></a></li>
+<!--                            <li><a href="#"><img src="../images/newRoom.png"/></a></li>-->
+                            <li><a id="create_room"><img src="../images/newRoom.png" /></a></li>                           
                             <li>
                                 <a href="#" id="popup-select-room" data-placement="right">
                                     <img src="../images/changeRoom.png"/>
@@ -147,45 +150,100 @@
                     </div>
                 </div>
             </div>
+            <!--End Panel Left-->
+
+            <!--Start Main Content-->
             <div class="main-content">
                 <?php //echo $content; ?>
+
+                <!--Start Social Share (fb, twitter,...)-->
                 <div class="social-share">
                     <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png" /></a>
                     <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
                     <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
                     <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
                 </div>
+                <!--End Social Share (fb, twitter,...)-->
 
                 <!--Create new room-->
-                <div class="create-new-room">
-                    <div class="room-header">
-                        <span>Create new room</span>
-                    </div>
+<!--                <div class="create-new-room">
+                    <h5 class="room-header">
+                        <span class="room-conner-left"></span>
+                        <i class="triangle-topright-room"></i>
+                        <span>Create new room</span> 
+                        <span class="room-conner-right"></span>
+                        <i class="triangle-topleft-room"></i>
+                    </h5>                   
                     <form class="form-horizontal" role="form">
                         <div class="form-group col-sm-12 col-sm-offset-3">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Room name</label>
-                            <div class="col-sm-10">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Room name</label>
+                            <div class="col-sm-8">
                                 <input type="email" class="form-control" id="inputEmail3" placeholder="Enter room name">
+                                    <i class="glyphicon glyphicon-remove"></i>
                             </div>
                         </div>
-                        <div class="form-group col-sm-12 col-sm-offset-3">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Storage</label>
-                            <select class="form-control">
-                                <option>Local storage</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                        <div class="form-group col-sm-12 col-sm-offset-3 storage">
+                            <label for="inputPassword3" class="col-sm-4 control-label">Storage</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>Local storage</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>                         
                         </div>                       
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Create</button>
-                                <button type="submit" class="btn btn-default">Cancel</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-default-create">Create</button>
                             </div>
                         </div>
                     </form>
-                </div>               
+                </div>-->
+                <!--End create new room-->
+
+                <!--Dialog room-->
+                <div id="dialog-modal">
+                    <!--Start-->
+                     <span class="room-conner-left"></span>
+                        <i class="triangle-topright-room"></i>
+                        <span class="room-conner-right"></span>
+                        <i class="triangle-topleft-room"></i>                 
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group col-sm-12 col-sm-offset-3">
+                            <label for="inputEmail3" class="col-sm-4 control-label">Room name</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Enter room name">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12 col-sm-offset-3 storage">
+                            <label for="inputPassword3" class="col-sm-4 control-label">Storage</label>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+                                    <option>Local storage</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>                         
+                        </div>                       
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-default-create">Create</button>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <!--End-->
+                </div>
+                <!--End Dialog room-->
+
+
 
                 <div class="chang_background_box hidden">
                     <div class="list-chang-background">
@@ -222,6 +280,8 @@
                 </div>
 
             </div>
+            <!--End Main Content-->
+            <!--Start Panel Right-->
             <div class="panel-right">
                 <div class="nav-right">
                     <div class="nav-list nav-list-top">
@@ -312,9 +372,15 @@
                     <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
                 </div>
             </div>
+            <!--End Panel Right-->
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
+        <!--<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.10.2.js"></script>-->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
+        <!--<script src="<?php //echo Yii::app()->request->baseUrl; ?>/js/dom-drag.js"></script>-->
+        
+
     </body>
 </html>
