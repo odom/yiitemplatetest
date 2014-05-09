@@ -11,9 +11,11 @@ body{
 }
 .panel-left {
     /*    border:2px solid green;*/
+   
     float:left;
     margin:0;
 }
+
 .menu-left{
     float: left;
     width: 200px;
@@ -41,12 +43,13 @@ body{
     float:left;
     width: 60px;
     background:#989898;
+    position: relative;
 }
 .panel-left,.menu-left,.nav-left,.panel-right,.menu-right,.nav-right,.main-content{
     height:800px;
 }
 .main-content {
-    border:2px solid #737373;
+    /*border:2px solid red;*/
     width:72.9%;
     margin:0 0 0 260px;
 }
@@ -234,6 +237,17 @@ body{
     padding:3px;
     border-radius:5px 0 0 5px;
 }
+/*.direction-nav-left{
+    top: 50%;
+    background:#455363;
+    position:absolute;
+    height:20px;
+    right: -10px;
+    width: 12px;
+    text-align:left;
+    padding:3px;
+    border-radius:0 5px 5px 0;
+}*/
 .list-view-group ul li .div-avatar .list-view{
     padding-left: 10px;
     color: #181D23;
