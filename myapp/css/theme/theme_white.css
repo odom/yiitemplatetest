@@ -27,3 +27,17 @@
 .form-group button{
     background:#e3e3e3;
 }
+
+/* corner create room style */
+.triangle-topleft-room {
+
+    border-top: 7px solid #e3e3e3;
+}
+
+.triangle-topright-room{
+    border-right:7px solid #e3e3e3;
+}
+
+.room-conner-left,.room-conner-right{
+    background:#e3e3e3;
+}
