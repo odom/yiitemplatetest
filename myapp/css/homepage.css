@@ -107,6 +107,7 @@ body{
     margin-top: 10px;
     position: absolute;
     color: white;
+    font-weight: bold;
 }
 .title-bar-right{
     color: white;
@@ -137,7 +138,8 @@ body{
     float:left;
     position: relative;
     top:10px;
-    margin-left:10px;   
+    margin-left:10px; 
+    font-weight: bold;
 }
 .title-bar-right .span-left i{
     position: relative;

@@ -315,7 +315,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" class="toggle-fullscreen">
                                     <img src="../images/dashboard.png" img-over="../images/dashboard_hover.png" img-mouseout="../images/dashboard.png" img-click="../images/dashboard_click.png"/>
                                 </a>
                             </li>
