@@ -32,7 +32,7 @@
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
                         <div class="menu-item">
-                            <span class="profile-image"><a href="#"><img src="../images/avatar.png" /></a></span>
+                            <span class="profile-image"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/../images/avatar.png" /></a></span>
                             <ul>
                                 <li><i class="fa fa-circle icon-online"></i></li>
                                 <li><i class="fa fa-info-circle icon-info"></i></li>
@@ -116,7 +116,7 @@
                             </li>                           
                         </ul>
                     </div>
-                    <span class="direction-left"><a href="#"><i class="fa fa-angle-double-left"></i></a></span>
+                    <span class="direction-left"><a href="#" id="directionleft"><i class="fa fa-angle-double-left"></i></a></span>
                 </div>
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
@@ -396,17 +396,16 @@
                             </li>
                         </ul>
                     </div>
-                    <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
+                    <span class="direction-right"><a href="#" id="directionright"><i class="fa fa-angle-double-right"></i></a></span>
                 </div>
             </div>
             <!--End Panel Right-->
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cookie.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
-
-
     </body>
 </html>
