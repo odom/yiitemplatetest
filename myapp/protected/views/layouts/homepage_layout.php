@@ -115,7 +115,7 @@
                             </li>                           
                         </ul>
                     </div>
-                    <span class="direction-left"><a href="#"><i class="fa fa-angle-double-left"></i></a></span>
+                    <span class="direction-left"><a href="#" id="directionleft"><i class="fa fa-angle-double-left"></i></a></span>
                 </div>
                 <div class="nav-left">
                     <div class="nav-list nav-list-bordertop">
@@ -347,7 +347,7 @@
                             </li>
                         </ul>
                     </div>
-                    <span class="direction-right"><a href="#"><i class="fa fa-angle-double-right"></i></a></span>
+                    <span class="direction-right"><a href="#" id="directionright"><i class="fa fa-angle-double-right"></i></a></span>
                 </div>
             </div>
         </div>
