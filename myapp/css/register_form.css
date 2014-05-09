@@ -1,6 +1,3 @@
-body.register_page{
-	background:url(../images/tropical_dock-wallpaper-1366x768.jpg) no-repeat scroll center;	
-}
 .register{
 	border-radius:3px;
 	height:350px;
@@ -11,4 +8,11 @@ body.register_page{
 
 .register * {
     border-radius: 0;
+}
+html {
+	height: 100%;
+}
+#carousel-background img{
+	width: 100%;
+	height: 100%;
 }

@@ -85,6 +85,7 @@ $(document).click(function (e) {
         });
         $("#dialog-modal").dialog("widget").draggable("option","containment",".main-content");
 //        $( "#dialog-modal" ).resizable('disable').removeClass('ui-state-disabled');
+        $(".ui-dialog-titlebar").append("<span class='room-conner-left'></span><i class='triangle-topright-room'></i><span class='room-conner-right'></span><i class='triangle-topleft-room'></i>");
     });
 
 
@@ -155,4 +156,3 @@ $(document).click(function (e) {
     });
 
 }); //End of Document Ready
-
