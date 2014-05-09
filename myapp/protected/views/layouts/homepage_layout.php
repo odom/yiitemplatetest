@@ -330,7 +330,7 @@
                 <div class="menu-right">
                     <div class="title-bar-right banner-md">
                         <span class="triangle-top-right"></span>
-                        <i class="triangle-top-right-conner"></i>popup-select-room
+                        <i class="triangle-top-right-conner"></i>
                         <span class="span-left">
                             <i class="fa fa-sort-desc"></i> <span>Contact</span>
                         </span>
