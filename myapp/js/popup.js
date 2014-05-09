@@ -136,7 +136,7 @@ $(document).click(function (e) {
     /*slide panel left action*/ 
    $("#directionleft").click(function(){
         var ml=$(".menu-left");
-        $(".main-content").animate({width:'+=10.5%',margin:"0 0 0 -=10.5%"},1);
+        $(".main-content").animate({width:'+=10.5%',margin:"0 0 0 -=200px"},1);
         ml.animate({width:'0px',opacity:'1'},"fast",function(){
         ml.hide();
         $(".nav-left").append("<span class='direction-left'><a href='#'><i class='fa fa-angle-double-right'></i></a></span>");
@@ -150,7 +150,7 @@ $(document).click(function (e) {
         mr.animate({width:'200px',opacity:'1'},"fast",function(){
         $(".nav-left .direction-left").hide();
         $(".nav-left").css({"position":"static"});
-        $(".main-content").animate({width:'-=10.5%',margin:"0 0 0 +=10.5%"},1);
+        $(".main-content").animate({width:'-=10.5%',margin:"0 0 0 +=200px"},1);
     });
     });
 
