@@ -10,6 +10,22 @@ $(document).ready(function(e) {
     $(".main-content").css({
         "background": "url('"+$.cookie('mapring-afinos-background')+"') scroll center"
         });
+        
+$(document).click(function (e) {
+    if (($('#popup-changbackground').has(e.target).length == 0)) {
+        $('#popup-changbackground').popover('hide');
+    }
+});
+$(document).click(function (e) {
+    if (($('#popup-change-them').has(e.target).length == 0)) {
+        $('#popup-change-them').popover('hide');
+    }
+});
+$(document).click(function (e) {
+    if (($('#popup-select-room').has(e.target).length == 0)) {
+        $('#popup-select-room').popover('hide');
+    }
+});
 
     $changeBackground = $("#popup-changbackground").popover({
         html: true,
