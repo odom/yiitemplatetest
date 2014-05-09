@@ -17,3 +17,13 @@
 .list-view-group ul li .div-avatar .group-sm-link a i{
     color:black;
 }
+
+.ui-widget-header {
+    background:#e3e3e3;
+}
+.ui-dialog .ui-dialog-content {
+    background:#ffffff;
+}
+.form-group button{
+    background:#e3e3e3;
+}

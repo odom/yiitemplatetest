@@ -14,3 +14,14 @@
 .direction-left a,.direction-right a{
     color:white;
 }
+
+
+.ui-widget-header {
+    background:#df2323;
+}
+.ui-dialog .ui-dialog-content {
+    background:#ff6c6c;
+}
+.form-group button{
+    background:#df2323;
+}
