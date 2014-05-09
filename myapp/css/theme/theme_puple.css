@@ -1,0 +1,16 @@
+.banner-big,.banner-md,.menu-header-left,.triangle-top-right{
+    background:#7535c5;
+}
+.triangle-topleft{
+    border-top: 7px solid #7535c5;
+}
+.triangle-top-right-conner{
+    border-right: 7px solid #7535c5;
+}
+
+.menu-left,.direction-left,.menu-right,.direction-right{
+     background:#b275ff;
+}
+.direction-left a,.direction-right a{
+    color:white;
+}

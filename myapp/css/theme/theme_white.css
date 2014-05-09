@@ -1,0 +1,19 @@
+.banner-big,.banner-md,.menu-header-left,.triangle-top-right{
+    background:#e3e3e3;
+}
+.triangle-topleft{
+    border-top: 7px solid #e3e3e3;
+}
+.triangle-top-right-conner{
+    border-right: 7px solid #e3e3e3;
+}
+
+.menu-left,.direction-left,.menu-right,.direction-right{
+     background:#ffffff;
+}
+.direction-left a,.direction-right a{
+    color:black;
+}
+.list-view-group ul li .div-avatar .group-sm-link a i{
+    color:black;
+}
