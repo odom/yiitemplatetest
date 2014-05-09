@@ -190,11 +190,12 @@
 
                 <!--Dialog create new room-->
                 <div id="dialog-modal">
-                    <!--Start-->
-                    <span class="room-conner-left"></span>
-                    <i class="triangle-topright-room"></i>
-                    <span class="room-conner-right"></span>
-                    <i class="triangle-topleft-room"></i>                 
+<!--                    <span class="room-conner-left"></span>
+                    <i class="triangle-topright-room"></i>-->
+<!--                    <span class="room-conner-right"></span>
+                    <i class="triangle-topleft-room"></i>                 -->
+
+                    
                     <form class="form-horizontal" role="form">
                         <div class="form-group col-sm-12 col-sm-offset-3">
                             <label for="inputEmail3" class="col-sm-4 control-label">Room name</label>
@@ -217,13 +218,12 @@
                         </div>                       
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="button" class="btn btn-default" id="cancel">Cancel</button>
+                                <!--<a href="self.close()" type="button" class="btn btn-default">Cancel</a>-->
                                 <button type="submit" class="btn btn-default-create">Create</button>
                             </div>
                         </div>
                     </form>
-
-                    <!--End-->
                 </div>
                 <!--End Dialog create new room-->
 

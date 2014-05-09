@@ -62,12 +62,13 @@ $(document).ready(function(e) {
  
     $("#create_room").click(function(){
         $( "#dialog-modal" ).dialog({
+            resizable: false,
             height: 250,
             width:  550,
             title:'Create new room'
         });
         $("#dialog-modal").dialog("widget").draggable("option","containment",".main-content");
-        $( "#dialog-modal" ).resizable('disable').removeClass('ui-state-disabled');
+//        $( "#dialog-modal" ).resizable('disable').removeClass('ui-state-disabled');
     });
 
 
@@ -87,4 +88,13 @@ $(document).ready(function(e) {
         $(this).children('img').attr('src',$(this).children('img').attr('img-click'));
 
     });
+    
+    $("#cancel").click(function(){
+        $("#dialog-modal").dialog( "close" );
+    
+    });
+    
+    
+    
 }); //End of Document Ready
+
