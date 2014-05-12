@@ -27,16 +27,21 @@ $(document).click(function (e) {
     }
 });
 
+
     $changeBackground = $("#popup-changbackground").popover({
+        
         html: true,
         //        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
         title: '<span class="title-popup">Change background</span>',
         content: function() {
             return $(".chang_background_box").html();
-        },fixclass:'popover.left,popover.top'
+        }
+        
     });
 
     $changeBackground.on('shown.bs.popover', function() {
+
+        
         $(".list-chang-background a").click(function() {
             $(".main-content").css({
                 "background": "url('"+$(this).children('img').data('css')+"') scroll center"
@@ -154,5 +159,15 @@ $(document).click(function (e) {
         $(".main-content").animate({width:'-=10.5%',margin:"0 0 0 +=200px"},1);
     });
     });
+    
+    
+    $('#test-popup').popover({
+    content:'hello sokang', //$('#emotions').html(),
+    html:true,
+    title: '<span class="title-popup">Change theme</span>',
+    placement: 'right',
+    template: '<div class="popover weiboEmo"><div class="arrow arrowafn"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+
+});
 
 }); //End of Document Ready
