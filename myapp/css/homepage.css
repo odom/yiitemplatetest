@@ -28,6 +28,7 @@ body{
     background:#989898;
 }
 .panel-right {
+    white-space:nowrap;
     position:absolute;
     top:0;
     right:0;
@@ -343,10 +344,11 @@ body{
     font-weight: bold;
 }
 
- .popover{
+.popover.left { margin-left: -50px; }
+ .popover.top{
      margin-top: 63px;
 }
-
+/*
 .popover.left {
     margin-left: -18px;
 }
@@ -357,7 +359,7 @@ body{
     background-color: #FFF;
     text-align: center;
     width: 100%
-}
+}*/
 
 .select-room-list ul{
     list-style-type: none;

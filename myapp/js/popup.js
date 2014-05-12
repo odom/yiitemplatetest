@@ -33,7 +33,7 @@ $(document).click(function (e) {
         title: '<span class="title-popup">Change background</span>',
         content: function() {
             return $(".chang_background_box").html();
-        }
+        },fixclass:'popover.left,popover.top'
     });
 
     $changeBackground.on('shown.bs.popover', function() {
