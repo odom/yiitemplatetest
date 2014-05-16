@@ -35,13 +35,11 @@ $(document).click(function (e) {
         title: '<span class="title-popup">Change background</span>',
         content: function() {
             return $(".chang_background_box").html();
-        }
+        }, template: '<div class="popover chbackground"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
         
     });
 
-    $changeBackground.on('shown.bs.popover', function() {
-
-        
+    $changeBackground.on('shown.bs.popover', function() {   
         $(".list-chang-background a").click(function() {
             $(".main-content").css({
                 "background": "url('"+$(this).children('img').data('css')+"') scroll center"
@@ -160,14 +158,14 @@ $(document).click(function (e) {
     });
     });
     
-    
-    $('#test-popup').popover({
-    content:'hello sokang', //$('#emotions').html(),
-    html:true,
-    title: '<span class="title-popup">Change theme</span>',
-    placement: 'right',
-    template: '<div class="popover weiboEmo"><div class="arrow arrowafn"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
-
-});
+    /* pop over test template */
+//    $('#test-popup').popover({
+//    content:'hello sokang', //$('#emotions').html(),
+//    html:true,
+//    title: '<span class="title-popup">Change theme</span>',
+//    placement: 'right',
+//    template: '<div class="popover weiboEmo"><div class="arrow arrowafn"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>',
+//
+//});
 
 }); //End of Document Ready
