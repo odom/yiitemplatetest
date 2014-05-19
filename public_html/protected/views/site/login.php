@@ -14,7 +14,7 @@
 				          <input class="form-control input-lg" type="password" placeholder="Password">
 				        </div>
 				        <br>
-				        <p><button type="submit" class="btn btn-primary btn-lg"> &nbsp;&nbsp;&nbsp; ENTER &nbsp;&nbsp;&nbsp; </button></p>
+				        <p> <a class="btn btn-primary btn-lg" href="/site/home"> &nbsp;&nbsp;&nbsp; ENTER &nbsp;&nbsp;&nbsp;</a></p>
 				        <div class="social-sign-in">
 				            <p><a class="btn btn-primary" href="#"><i class="fa fa-facebook"></i> &nbsp;Sign in with Facebook</a></p>
 				            <p><a class="btn btn-info" href="#"><i class="fa fa-twitter"></i>&nbsp;Sign in with Twitter</a></p>
