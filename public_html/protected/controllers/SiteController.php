@@ -112,4 +112,12 @@ class SiteController extends Controller {
 		$this->layout = 'homepage_layout';
 		$this->render('home');
 	}
+
+
+	/**
+	 * Unsubscribe Action
+	 */
+	public function actionUnsubscribe() {
+		$this->render('unsubscribe');
+	}
 }
