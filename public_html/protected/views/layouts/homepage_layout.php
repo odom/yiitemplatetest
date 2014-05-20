@@ -8,6 +8,7 @@
         <!-- blueprint CSS framework -->
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+	    <link rel="shortcut icon" href="/images/icon/favicon.png">
         <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
         <![endif]-->
@@ -16,14 +17,14 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />  
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/homepage.css" />
         <link rel="stylesheet" type="text/css" href="" id="changetheme" />
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
 
-    <body class="homepage">    
+    <body class="homepage">
         <div class="whole-content">
             <!--Start Panel Left-->
             <div class="panel-left">
@@ -51,13 +52,13 @@
                             <a href="#"><i class="fa fa-plus"></i></a>
                             <a href="#"><img src="../images/magnifier.png" class="search-image"/></a>
                         </span>
-                    </div> 
+                    </div>
                     <div class="list-view-group">
                         <ul>
                             <li>
                                 <a href="#">
-                                    <div class="div-avatar">     
-                                        <img src="../images/Santa_Place.jpg"/>                                  
+                                    <div class="div-avatar">
+                                        <img src="../images/Santa_Place.jpg"/>
                                         <span class="list-view">Sopheak Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -65,8 +66,8 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="div-avatar">     
-                                        <img src="../images/Santa_Place.jpg"/>                                
+                                    <div class="div-avatar">
+                                        <img src="../images/Santa_Place.jpg"/>
                                         <span class="list-view">Dara Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -74,8 +75,8 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="div-avatar">     
-                                        <img src="../images/Santa_Place.jpg"/>                                   
+                                    <div class="div-avatar">
+                                        <img src="../images/Santa_Place.jpg"/>
                                         <span class="list-view">Business Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -93,13 +94,13 @@
                         <span class="span-right">
                             <a href="#"><img src="../images/magnifier.png" class="search-image"/></a>
                         </span>
-                    </div> 
+                    </div>
                     <div class="list-view-group">
                         <ul>
                             <li>
                                 <a href="#">
-                                    <div class="div-avatar">     
-                                        <img src="../images/Santa_Place.jpg"/>                                  
+                                    <div class="div-avatar">
+                                        <img src="../images/Santa_Place.jpg"/>
                                         <span class="list-view">Jeen Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -107,13 +108,13 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <div class="div-avatar">     
-                                        <img src="../images/Santa_Place.jpg"/>                                
+                                    <div class="div-avatar">
+                                        <img src="../images/Santa_Place.jpg"/>
                                         <span class="list-view">Odom Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
                                 </a>
-                            </li>                           
+                            </li>
                         </ul>
                     </div>
                     <span class="direction-left"><a href="#" id="directionleft"><i class="fa fa-angle-double-left"></i></a></span>
@@ -139,7 +140,7 @@
                                 <a href="#" class="img-list">
                                     <img src="../images/multimedia.png" img-over="../images/multimedia_hover.png" img-mouseout="../images/multimedia.png" img-click="../images/multimedia_click.png"/>
                                 </a>
-                            </li> 
+                            </li>
                             <li>
                                 <a href="#">
                                     <img src="../images/copy.png" img-over="../images/copy_hover.png" img-mouseout="../images/copy.png" img-click="../images/copy_click.png"/>
@@ -168,7 +169,7 @@
                                 <a href="#" class="img-list">
                                     <img src="../images/trash.png" img-over="../images/trash_hover.png" img-mouseout="../images/trash.png" img-click="../images/trash_click.png"/>
                                 </a>
-                            </li>                             
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -186,10 +187,10 @@
                     <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
                     <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
                 </div>
-                <!--End Social Share (fb, twitter,...)-->                
+                <!--End Social Share (fb, twitter,...)-->
 
                 <!--Dialog create new room-->
-                <div id="dialog-modal">                   
+                <div id="dialog-modal">
                     <form class="form-horizontal" role="form">
                         <div class="form-group col-sm-12 col-sm-offset-3">
                             <label for="inputEmail3" class="col-sm-4 control-label">Room name</label>
@@ -208,11 +209,11 @@
                                     <option>3</option>
                                     <option>4</option>
                                 </select>
-                            </div>                         
-                        </div>                       
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="button" class="btn btn-default" id="cancel">Cancel</button>                              
+                                <button type="button" class="btn btn-default" id="cancel">Cancel</button>
                                 <button type="submit" class="btn btn-default-create">Create</button>
                             </div>
                         </div>
@@ -253,7 +254,7 @@
                             <li><input type="radio" name="room" value="busines"/> <span class="popup-list">Business Room</span><img src="../images/displayCanvas.png"/></li>
                             <li><input type="radio" name="room" value="floophie"/> <span class="popup-list">Floophie Room</span><img src="../images/displayCanvas.png"/></li>
                         </ul>
-                    </div>  
+                    </div>
                 </div>
 
                 <div class="chang-them-box hidden">
@@ -267,7 +268,7 @@
                             <li><a href="#" data-css="/css/theme/theme_puple.css" class="color-pink"></a></li>
                             <li><a href="#" data-css="/css/theme/theme_white.css" class="color-white"></a></li>
                         </ul>
-                    </div>                   
+                    </div>
                 </div>
 
             </div>
@@ -323,7 +324,7 @@
                                 <a href="#">
                                     <img src="../images/whiteboard.png" img-over="../images/whiteboard_hover.png" img-mouseout="../images/whiteboard.png" img-click="../images/whiteboard_click.png"/>
                                 </a>
-                            </li>                            
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -356,7 +357,7 @@
                                         <img src="../images/avatar.png"/>
                                         <span class="list-view">Floophie</span>
                                     </div>
-                                </a> 
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -374,7 +375,7 @@
                     <div class="list-view-group">
                         <ul>
                             <li>
-                                <div class="div-avatar"> 
+                                <div class="div-avatar">
                                     <img src="../images/avatar.png"/>
                                     <i class="fa fa-circle fa-online"></i>
                                     <span>Floophie</span>
@@ -383,7 +384,7 @@
                                         <a href="#"><i class="fa fa-comment"></i></a>
                                         <a href="#"><i class="fa fa-pencil-square-o"></i></a>
                                         <a href="#"><i class="fa fa-info-circle"></i></a>
-                                        <a href="#"><i class="fa fa-eye"></i></a>                                
+                                        <a href="#"><i class="fa fa-eye"></i></a>
                                     </div>
                                 </div>
                             </li>
