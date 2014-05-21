@@ -27,7 +27,7 @@ class SiteController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		$this->layout = 'register_layout';;
+		$this->layout = 'register_layout';
 		$this->render('index');
 	}
 
