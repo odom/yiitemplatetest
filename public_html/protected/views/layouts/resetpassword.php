@@ -11,20 +11,20 @@
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/register_form.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/resetpassword.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body class="homepage">
-
-<div class="container">
-	<?php echo $content; ?>
-</div><!-- page -->
-
+<body>
+	<div class="container width80">
+		<div class="banner">
+			<a href="http://afinos.us/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/AFINOS-2TM.png" ></a>
+		</div>
+		<div class="sub-contain">
+			<?php echo $content; ?>
+		</div>
+	</div><!-- page -->
 </body>
 </html>
