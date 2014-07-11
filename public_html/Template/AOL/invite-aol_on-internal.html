@@ -15,10 +15,30 @@
 	}
 
 	.btn {
-		padding: 10px 20px;
-		display: inline;
-		border-radius: 15px;
-		margin: 20px 0
+		-moz-user-select: none;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.42857;
+		margin-bottom: 0;
+		padding: 6px 12px;
+		text-align: center;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+	.btn-primary {
+		background-color: #428bca;
+		border-color: #357ebd;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn-info:hover {
+		background: #465262;
 	}
 
 	.btn-info {
@@ -35,7 +55,7 @@
 		border: 1px dashed #465262;
 		border-top: 1px solid #badce5;
 		padding-top: 10px;
-		border-bottom: 10px solid #465262;
+		border-bottom: 1px solid #465262;
 	}
 
 	.row {
@@ -104,6 +124,9 @@
 				<p>###username### has invited you to join them to Co-View AOL ON videos together in real time!</p>
 				<p>Experience this revolutionary new and easy way to share rich media video and music across all your mobile devices.
 					Chat, Talk, and comment in selected groups while you co-view videos!</p>
+				<p>
+					<a href="http://afinos.us/download" target="_blank" class="btn btn-primary">Download Now!</a>
+				</p>
 				<div class="row">
 					<div class="col-sm-12">
 						<img src="http://web.afinos.us/Template/Images/VIDEO-CALL.png"/>
@@ -111,14 +134,15 @@
 				</div>
 				<p>Welcome to the Free World!</p>
 				<p>Afinos, Inc.</p>
-				<hr>
 			</div>
 
+			<div class="social" style="background: #465262;text-align: right; height: 32px; padding: 10px 10%;">
+				<a href="https://www.facebook.com/CoSync"><img style="width: 32px;margin: 0 10px 20;" src="http://web.afinos.us/Template/Images/facebook.png"/></a>
+				<a href="https://twitter.com/afinos"><img style="width: 32px;margin: 0 10px 20;" src="http://web.afinos.us/Template/Images/twitter.png"/></a>
+				<a href="http://instagram.com/cosync"><img style="width: 32px;margin: 0 10px 20;" src="http://web.afinos.us/Template/Images/instagram.png"/></a>
+			</div>
 			<div class="footer">
-				<div class="social">
-					<a href="https://twitter.com/afinos"><img src="http://web.afinos.us/Template/Images/twitter.png"/></a>
-				</div>
-				<p>You are receiving this email because you registered at Afinos (244 Fifth Ave., Suite 2813, New York, NY 10011) and agreed to receive email from us regarding new features, events and special offers about Afinos services. If you wish to be unsubscribed from receiving these emails, <a href="http://web.afinos.us/site/unsubscribe">click here.</a></p>
+				<p>You are receiving this email because ###username### invited you to register at Afinos,Inc. (244 Fifth Ave., Suite 2813, New York, NY 10011) and To receive email from us regarding, you can suscribe to us by <a href="http://web.afinos.us/site/unsubscribe">click here.</a></p>
 			</div>
 		</div>
 	</div>
