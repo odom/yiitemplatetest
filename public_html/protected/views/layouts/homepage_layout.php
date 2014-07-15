@@ -124,12 +124,12 @@
                         <ul>
                             <li>
                                 <a href="#" id="create_room">
-                                    <img src="../images/newRoom.png" img-over="../images/newRoom_hover.png" img-mouseout="../images/newRoom.png" img-click="../images/newRoom_click.png"/>
+                                    <img src="../images/newRoom.png" img-over="../images/newRoom_hover.png" img-mouseout="../images/newRoom.png" img-click="../images/newRoom_click.png" title="Add New Room"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" id="popup-select-room" data-placement="right">
-                                    <img src="../images/changeRoom.png" img-over="../images/changeRoom_hover.png" img-mouseout="../images/changeRoom.png" img-click="../images/changeRoom_click.png"/>
+                                    <img src="../images/changeRoom.png" img-over="../images/changeRoom_hover.png" img-mouseout="../images/changeRoom.png" img-click="../images/changeRoom_click.png" title="Chang Room"/>
                                 </a>
                             </li>
                         </ul>
@@ -138,27 +138,27 @@
                         <ul>
                             <li>
                                 <a href="#" class="img-list">
-                                    <img src="../images/multimedia.png" img-over="../images/multimedia_hover.png" img-mouseout="../images/multimedia.png" img-click="../images/multimedia_click.png"/>
+                                    <img src="../images/multimedia.png" img-over="../images/multimedia_hover.png" img-mouseout="../images/multimedia.png" img-click="../images/multimedia_click.png" title="Multimedia"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/copy.png" img-over="../images/copy_hover.png" img-mouseout="../images/copy.png" img-click="../images/copy_click.png"/>
+                                    <img src="../images/copy.png" img-over="../images/copy_hover.png" img-mouseout="../images/copy.png" img-click="../images/copy_click.png" title="Copy"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/cut.png" img-over="../images/cut_hover.png" img-mouseout="../images/cut.png" img-click="../images/cut_click.png"/>
+                                    <img src="../images/cut.png" img-over="../images/cut_hover.png" img-mouseout="../images/cut.png" img-click="../images/cut_click.png" title="Cut"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/paste.png" img-over="../images/paste_hover.png" img-mouseout="../images/paste.png" img-click="../images/paste_click.png"/>
+                                    <img src="../images/paste.png" img-over="../images/paste_hover.png" img-mouseout="../images/paste.png" img-click="../images/paste_click.png" title="Paste"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" id="popup-change-them" data-placement="right">
-                                    <img src="../images/palette.png" img-over="../images/palette_hover.png" img-mouseout="../images/palette.png" img-click="../images/palette_click.png"/>
+                                    <img src="../images/palette.png" img-over="../images/palette_hover.png" img-mouseout="../images/palette.png" img-click="../images/palette_click.png" title="Change Theme"/>
                                 </a>
                             </li>
                         </ul>
@@ -167,7 +167,7 @@
                         <ul>
                             <li>
                                 <a href="#" class="img-list">
-                                    <img src="../images/trash.png" img-over="../images/trash_hover.png" img-mouseout="../images/trash.png" img-click="../images/trash_click.png"/>
+                                    <img src="../images/trash.png" img-over="../images/trash_hover.png" img-mouseout="../images/trash.png" img-click="../images/trash_click.png" title="Trash"/>
                                 </a>
                             </li>
                         </ul>
@@ -182,7 +182,7 @@
 
                 <!--Start Social Share (fb, twitter,...)-->
                 <div class="social-share">
-                    <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png" /></a>
+                    <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png"/></a>
                     <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
                     <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
                     <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
@@ -281,27 +281,27 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="../images/share.png" img-over="../images/share_hover.png" img-mouseout="../images/share.png" img-click="../images/share_click.png"/>
+                                    <img src="../images/share.png" img-over="../images/share_hover.png" img-mouseout="../images/share.png" img-click="../images/share_click.png" title="Share"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" id="popup-changbackground" data-placement="left">
-                                    <img src="../images/changeBackground.png" img-over="../images/changeBackground_hover.png" img-mouseout="../images/changeBackground.png" img-click="../images/changeBackground_click.png"/>
+                                    <img src="../images/changeBackground.png" img-over="../images/changeBackground_hover.png" img-mouseout="../images/changeBackground.png" img-click="../images/changeBackground_click.png" title="Change Background"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/displayCanvas.png" img-over="../images/displayCanvas_hover.png" img-mouseout="../images/displayCanvas.png" img-click="../images/displayCanvas_click.png"/>
+                                    <img src="../images/displayCanvas.png" img-over="../images/displayCanvas_hover.png" img-mouseout="../images/displayCanvas.png" img-click="../images/displayCanvas_click.png" title="Display Convas"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/displayThumbnails.png" img-over="../images/displayThumbnails_hover.png" img-mouseout="../images/displayThumbnails.png" img-click="../images/displayThumbnails_click.png"/>
+                                    <img src="../images/displayThumbnails.png" img-over="../images/displayThumbnails_hover.png" img-mouseout="../images/displayThumbnails.png" img-click="../images/displayThumbnails_click.png" title="DisplayThumbnails"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/displayList.png" img-over="../images/displayList_hover.png" img-mouseout="../images/displayList.png" img-click="../images/displayList_click.png"/>
+                                    <img src="../images/displayList.png" img-over="../images/displayList_hover.png" img-mouseout="../images/displayList.png" img-click="../images/displayList_click.png" title="Display List"/>
                                 </a>
                             </li>
 
@@ -312,17 +312,17 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="../images/cosync.png" img-over="../images/cosync_hover.png" img-mouseout="../images/cosync.png" img-click="../images/cosync_click.png"/>
+                                    <img src="../images/cosync.png" img-over="../images/cosync_hover.png" img-mouseout="../images/cosync.png" img-click="../images/cosync_click.png" title="Cosync"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="toggle-fullscreen">
-                                    <img src="../images/dashboard.png" img-over="../images/dashboard_hover.png" img-mouseout="../images/dashboard.png" img-click="../images/dashboard_click.png"/>
+                                    <img src="../images/dashboard.png" img-over="../images/dashboard_hover.png" img-mouseout="../images/dashboard.png" img-click="../images/dashboard_click.png" title="Dashboard"/>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="../images/whiteboard.png" img-over="../images/whiteboard_hover.png" img-mouseout="../images/whiteboard.png" img-click="../images/whiteboard_click.png"/>
+                                    <img src="../images/whiteboard.png" img-over="../images/whiteboard_hover.png" img-mouseout="../images/whiteboard.png" img-click="../images/whiteboard_click.png" title="White Board"/>
                                 </a>
                             </li>
                         </ul>
