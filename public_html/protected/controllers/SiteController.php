@@ -27,13 +27,12 @@ class SiteController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		echo Yii::app()->session['AccessKey'];
-		unset(Yii::app()->session['AccessKey']);
-		if(!Yii::app()->session['AccessKey']){
-			$this->layout = 'register_layout';
-
-		}
-		$this->render('index');
+        if(Yii::app()->session['AccessKey']){
+            $this->redirect('/site/home');
+        }else{
+            $this->layout = 'register_layout';
+            $this->render('index');
+        }
 	}
 
 
@@ -118,8 +117,12 @@ class SiteController extends Controller {
 	 * Home Action
 	 */
 	public function actionHome() {
+        if(Yii::app()->session['AccessKey']){
 		$this->layout = 'homepage_layout';
 		$this->render('home');
+        }else{
+            $this->redirect('/site/index');
+        }
 	}
 
 

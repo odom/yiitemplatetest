@@ -7,12 +7,12 @@ class UserController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		if(Yii::app()->session['AccessKey']){
-
-		}else{
-			$this->layout = 'register_layout';
-			$this->render('index');
-		}
+//		if(Yii::app()->session['AccessKey']){
+//
+//		}else{
+//			$this->layout = 'register_layout';
+//			$this->render('index');
+//		}
 
 	}
 
@@ -119,12 +119,8 @@ class UserController extends Controller {
 //		var_dump($response->data->AccessKey);die();
 		$message = $response->message;
 		if ( $response->code == 0) {
-
-//			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
-
-			Yii::app()->user->setState('acceskye', $response->data->AccessKey);
-			var_dump($_SESSION);die();
 			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
+
 		} else {
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
 			$this->redirect('/site/home');
