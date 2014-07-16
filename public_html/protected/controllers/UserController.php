@@ -106,14 +106,35 @@ class UserController extends Controller {
 
 	public function actionLogin(){
 		$postFields = 'UserName='.$_POST['username'].'&Password='.$_POST['password'];
-		$response = $this->curlPost('login',$postFields);
+		$response = $this->curlPost('profileWebService/login',$postFields);
 		$message = $response->message;
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
-
 		} else {
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
-			$this->redirect('/site/home');
+
+			//getRoomMyWorld
+			$input = null;
+			$input .= 'UserID='.$response->data->UserID;
+			$input .= '&AccessKey='.$response->data->AccessKey;
+//			var_dump($input);die;
+
+			$myProfile = $this->curlPost('profileWebService/getProfile', $input);
+			$roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
+			$roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
+			$myContact = $this->curlPost('profileWebService/getContact', $input);
+//			var_dump($myProfile);die();
+
+			$output = array(
+				'profile'=>$myProfile->data,
+				'myWorlds'=> $roomMyWorld->data,
+				'yourWorlds'=> $roomYourWorld->data,
+				'contacts'=> $myContact->data
+			);
+//			var_dump($output);die();
+			$this->layout = 'homepage_layout';
+//			$this->redirect('/site/home');
+			$this->render('/site/home', array('output'=>$output));
 		}
 	}
 
@@ -122,7 +143,7 @@ class UserController extends Controller {
 		$data .= 'UserName='.$_POST['username'];
 		$data .='&Password='.$_POST['password'];
 		$data .='&Email'.$_POST['email'];
-		$response = $this->curlPost('register', $data);
+		$response = $this->curlPost('profileWebService/register', $data);
 
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
