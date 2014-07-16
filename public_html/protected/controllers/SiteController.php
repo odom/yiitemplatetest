@@ -21,7 +21,6 @@ class SiteController extends Controller {
 	}
 
 
-
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -95,8 +94,7 @@ class SiteController extends Controller {
 	 * Logs out the current user and redirect to homepage.
 	 */
 	public function actionLogout() {
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		unset(Yii::app()->session['AccessKey']);
 	}
 
 
