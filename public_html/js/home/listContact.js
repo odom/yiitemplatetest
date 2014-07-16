@@ -47,6 +47,10 @@ var listRoomYourworld = function (roomYourWorld) {
     $('#roomYourWorld').html(strYourWorld);
 }
 
+var listProfile=function(myprofile){
+
+    $('.profile-name').text(myprofile.PersonalProfile.FirstName);
+}
 
 /**
  * MAIN
@@ -57,11 +61,14 @@ $('document').ready(function(){
     myWorlds = data.myWorlds;
 	contact = data.contacts;
     yourworlds=data.yourWorlds;
+    myprofile=data.profile;
 
     listRoomMyWord(myWorlds);
 	listContact(contact);
 
     listRoomYourworld(yourworlds);
+
+    listProfile(myprofile);
 
 });
 
