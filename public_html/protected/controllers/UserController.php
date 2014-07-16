@@ -7,8 +7,13 @@ class UserController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		$this->layout = 'register_layout';
-		$this->render('index');
+		if(Yii::app()->session['AccessKey']){
+
+		}else{
+			$this->layout = 'register_layout';
+			$this->render('index');
+		}
+
 	}
 
 
@@ -97,5 +102,34 @@ class UserController extends Controller {
 					"env" => $post['env']);
 			$this->redirect($this->createUrl('user/resetpassword', $param));
 		}
+	}
+
+	public function actionLogin(){
+		$url = 'http://ec2-23-23-171-236.compute-1.amazonaws.com/afinos-development/profileWebService/login/';
+		$postFields = 'UserName='.$_POST['username'].'&Password='.$_POST['password'];
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec ($ch);
+		curl_close ($ch);
+		$response = json_decode($response);
+//		var_dump($response->data->AccessKey);die();
+		$message = $response->message;
+		if ( $response->code == 0) {
+
+//			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
+
+			Yii::app()->user->setState('acceskye', $response->data->AccessKey);
+			var_dump($_SESSION);die();
+			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
+		} else {
+			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
+			$this->redirect('/site/home');
+		}
+
+
 	}
 }

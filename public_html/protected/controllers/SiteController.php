@@ -27,7 +27,12 @@ class SiteController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-		$this->layout = 'register_layout';
+		echo Yii::app()->session['AccessKey'];
+		unset(Yii::app()->session['AccessKey']);
+		if(!Yii::app()->session['AccessKey']){
+			$this->layout = 'register_layout';
+
+		}
 		$this->render('index');
 	}
 
@@ -78,9 +83,11 @@ class SiteController extends Controller {
 	 * Displays the login page
 	 */
 	public function actionLogin() {
+		if(!Yii::app()->session['AccessKey']){
 		$model=new LoginForm;
 		$this->layout = 'none';
 		$this->render('login',array('model'=>$model));
+		}
 	}
 
 
@@ -99,8 +106,10 @@ class SiteController extends Controller {
 	 * Register Action
 	 */
 	public function actionRegister() {
-		$this->layout = 'none';
-		$this->render('register');
+		if(!Yii::app()->session['AccessKey']){
+			$this->layout = 'none';
+			$this->render('register');
+		}
 	}
 
 
