@@ -49,7 +49,16 @@ var listRoomYourworld = function (roomYourWorld) {
 
 var listProfile=function(myprofile){
 
-    $('.profile-name').text(myprofile.PersonalProfile.FirstName);
+    var thumbnail='../images/avatar.png';
+    thum=myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
+
+    strProfile='<span class="profile-image">'+
+    '<a href="#"><img src="'+thum+'" /></a></span>'+
+    '<ul><li><i class="fa fa-circle icon-online"></i></li>'+
+    '<li><i class="fa fa-info-circle icon-info"></i></li></ul>'+
+    '<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>'
+
+    $('#menu-item').html(strProfile);
 }
 
 /**
