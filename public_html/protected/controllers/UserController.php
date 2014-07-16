@@ -105,18 +105,8 @@ class UserController extends Controller {
 	}
 
 	public function actionLogin(){
-		$url = 'http://ec2-23-23-171-236.compute-1.amazonaws.com/afinos-development/profileWebService/login/';
 		$postFields = 'UserName='.$_POST['username'].'&Password='.$_POST['password'];
-
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$response = curl_exec ($ch);
-		curl_close ($ch);
-		$response = json_decode($response);
-//		var_dump($response->data->AccessKey);die();
+		$response = $this->curlPost('login',$postFields);
 		$message = $response->message;
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
@@ -125,7 +115,22 @@ class UserController extends Controller {
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
 			$this->redirect('/site/home');
 		}
-
-
 	}
+
+	public function actionRegister(){
+		$data = '';
+		$data .= 'UserName='.$_POST['username'];
+		$data .='&Password='.$_POST['password'];
+		$data .='&Email'.$_POST['email'];
+		$response = $this->curlPost('register', $data);
+
+		if ( $response->code == 0) {
+			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
+		} else {
+			var_dump($response);die();
+			$this->redirect('/site');
+		}
+	}
+
+
 }

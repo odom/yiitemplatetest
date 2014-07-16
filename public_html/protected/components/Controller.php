@@ -21,5 +21,18 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-	public $connect = 'hi';
+	public function curlPost($action, $data){
+		$url = 'http://ec2-23-23-171-236.compute-1.amazonaws.com/afinos-development/profileWebService/';
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url.$action);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec ($ch);
+		curl_close ($ch);
+		$response = json_decode($response);
+		return $response;
+	}
+
+
 }
