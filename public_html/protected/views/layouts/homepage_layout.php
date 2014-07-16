@@ -58,7 +58,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status offline"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Sopheak Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -67,7 +67,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Dara Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -76,7 +76,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Business Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
