@@ -69,6 +69,7 @@ $('document').ready(function(){
     listRoomYourworld(yourworlds);
 
     listProfile(myprofile);
+	$('html, #listContact, #roomYourWorld, #roomMyWorld').niceScroll();
 
 });
 

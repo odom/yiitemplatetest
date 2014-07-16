@@ -372,10 +372,10 @@
             </div>
             <!--End Panel Right-->
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cookie.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.nicescroll.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
         <script src="http://54.221.195.231/socket.io/socket.io.js"></script>
