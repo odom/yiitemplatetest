@@ -23,7 +23,6 @@
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
-
     <body class="homepage">
         <div class="whole-content">
             <!--Start Panel Left-->
@@ -178,7 +177,11 @@
 
             <!--Start Main Content-->
             <div class="main-content">
-                <?php //echo $content; ?>
+
+	            <?php /* @var $this Controller */ ?>
+	            <?php $this->beginContent('//layouts/main'); ?>
+		            <?php echo $content; ?>
+	            <?php $this->endContent(); ?>
 
                 <!--Start Social Share (fb, twitter,...)-->
                 <div class="social-share">
