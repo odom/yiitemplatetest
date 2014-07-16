@@ -7,4 +7,6 @@ $(document).ready(function() {
 	$carousel = $('#carousel-background').carousel();
 
 	$('.ajax').colorbox();
+
 }); //End of Document Ready
+
