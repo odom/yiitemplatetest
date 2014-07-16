@@ -16,14 +16,32 @@ var listRoomMyWord = function (roomMyWorld) {
     $('#roomMyWorld').html(strMyWorld);
 }
 
+var listContact = function(contact){
+	var strContact = "";
+	var defaultAvata = '../images/avatar.png';
+	for(i=0 ; i< contact.length; i++){
+		var thum = contact[i].ImageAvatar == '' ? defaultAvata:contact[i].ImageAvatar;
+		strContact += '<li><a href="#">'+
+							'<div class="div-avatar">'+
+								'<img src="'+thum+'" />'+
+								'<span class="list-view">'+contact[i].DisplayName+'</span>'+
+							'</div>' +
+						'</a>'+
+					'</li>'
+
+	}
+	$('#listContact').html(strContact);
+}
 
 /**
- * Created by cnpisit on 7/16/14.
+ * MAIN
  */
 $('document').ready(function(){
     var data = $.parseJSON($('#userData').val());
     myWorlds = data.myWorlds;
+	contact = data.contacts;
     listRoomMyWord(myWorlds);
+	listContact(contact);
 
 });
 

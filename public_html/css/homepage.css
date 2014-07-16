@@ -685,4 +685,11 @@ body{
     color:#c0c0c0;
 }
 
-
+#listContact {
+    height: 246px;
+    overflow: auto;
+}
+#roomMyWorld {
+    height: 246px;
+    overflow: auto;
+}

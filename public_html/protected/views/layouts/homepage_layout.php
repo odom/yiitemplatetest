@@ -54,7 +54,7 @@
                     </div>
                     <div class="list-view-group">
                         <ul id="roomMyWorld">
-                            <li>
+<!--                            <li>
                                 <a href="#">
                                     <div class="div-avatar">
                                         <img src="../images/Santa_Place.jpg"/><span class="status offline"><i class="fa fa-circle"></i></span>
@@ -62,25 +62,7 @@
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
-                                        <span class="list-view">Dara Room</span>
-                                        <i class="fa fa-dropbox dropbox"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
-                                        <span class="list-view">Business Room</span>
-                                        <i class="fa fa-dropbox dropbox"></i>
-                                    </div>
-                                </a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
 
@@ -345,23 +327,15 @@
                     </div>
 
                     <div class="list-view-group">
-                        <ul>
-                            <li>
+                        <ul id="listContact">
+                            <!--<li>
                                 <a href="#">
                                     <div class="div-avatar">
                                         <img src="../images/avatar.png"/>
                                         <span class="list-view">Floophie</span>
                                     </div>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="div-avatar">
-                                        <img src="../images/avatar.png"/>
-                                        <span class="list-view">Floophie</span>
-                                    </div>
-                                </a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
 
