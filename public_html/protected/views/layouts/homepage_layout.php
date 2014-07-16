@@ -77,7 +77,7 @@
                         </span>
                     </div>
                     <div class="list-view-group">
-                        <ul>
+                        <ul id="roomYourWorld">
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
