@@ -120,4 +120,12 @@ class SiteController extends Controller {
 	public function actionUnsubscribe() {
 		$this->render('unsubscribe');
 	}
+
+
+	/**
+	 * Subscribe Action
+	 */
+	public function actionSubscribe() {
+		$this->render('subscribe');
+	}
 }
