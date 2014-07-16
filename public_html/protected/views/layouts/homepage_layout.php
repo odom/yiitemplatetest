@@ -31,7 +31,7 @@
                     <div class="menu-header banner-big">
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
-                        <div class="menu-item">
+                        <div class="menu-item" id="menu-item">
                             <span class="profile-image"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/../images/avatar.png" /></a></span>
                             <ul>
                                 <li><i class="fa fa-circle icon-online"></i></li>
