@@ -23,7 +23,7 @@
 
 </script>
 	<div class="register">
-        <form role="form">
+        <form role="form" method="post" action="user/register">
             <h3>Create an Acount</h3>
             <div class="text-center">
                 <div class="form-group">
