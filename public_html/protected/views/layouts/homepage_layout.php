@@ -23,7 +23,6 @@
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
-
     <body class="homepage">
         <div class="whole-content">
             <!--Start Panel Left-->
@@ -58,7 +57,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status offline"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Sopheak Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -67,7 +66,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Dara Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -76,7 +75,7 @@
                             <li>
                                 <a href="#">
                                     <div class="div-avatar">
-                                        <img src="../images/Santa_Place.jpg"/>
+                                        <img src="../images/Santa_Place.jpg"/><span class="status online"><i class="fa fa-circle"></i></span>
                                         <span class="list-view">Business Room</span>
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
@@ -178,7 +177,11 @@
 
             <!--Start Main Content-->
             <div class="main-content">
-                <?php //echo $content; ?>
+
+	            <?php /* @var $this Controller */ ?>
+	            <?php $this->beginContent('//layouts/main'); ?>
+		            <?php echo $content; ?>
+	            <?php $this->endContent(); ?>
 
                 <!--Start Social Share (fb, twitter,...)-->
                 <div class="social-share">

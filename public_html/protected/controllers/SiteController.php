@@ -95,6 +95,9 @@ class SiteController extends Controller {
 	 */
 	public function actionLogout() {
 		unset(Yii::app()->session['AccessKey']);
+        $this->layout = 'register_layout';
+        $this->redirect('/site');
+
 	}
 
 

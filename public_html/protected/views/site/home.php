@@ -1,1 +1,1 @@
-<h1>Homepage</h1>
+<textarea id="userData" class="hidden"><?php  echo json_encode($output); ?></textarea>
