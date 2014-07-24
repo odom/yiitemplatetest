@@ -204,7 +204,7 @@
                     </form>
                 </div>
                 <!--End Dialog create new room-->
-
+				<!--change background-->
                 <div class="chang_background_box hidden">
                     <div class="list-chang-background">
                         <ul>
@@ -229,6 +229,7 @@
                         </ul>
                     </div>
                 </div>
+
 
                 <div class="select-room-box hidden">
                     <div class="select-room-list">

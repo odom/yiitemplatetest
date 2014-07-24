@@ -14,10 +14,11 @@
 					<input class="form-control input-lg" type="password" name="password" placeholder="Password">
 				</div>
 				<br>
-				<a href="#" style="color: #FFFFFF">Forget password</a>
+				<!--<a href="#" style="color: #FFFFFF" id="forgotpassword">Forget password</a>-->
+				<a  class="ajax" href="<?php echo $this->createUrl('site/Forgotpassword') ?>">Forgot Password</a>
+				<br/>
+				<br/>
 
-				<br>
-				<br>
 				<button type="submit" class="btn btn-lg btn-primary">&nbsp;&nbsp;&nbsp; ENTER &nbsp;&nbsp;&nbsp;</button>
 				<!--
 				<div class="social-sign-in">
@@ -33,4 +34,5 @@
 			</div>
 		</div>
 	</form>
+
 </div>

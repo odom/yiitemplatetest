@@ -122,7 +122,7 @@ class SiteController extends Controller {
 		$this->layout = 'homepage_layout';
 		$this->render('home');
         }else{
-            $this->redirect('/site/index');
+            $this->redirect('/site');
         }
 	}
 
@@ -141,4 +141,15 @@ class SiteController extends Controller {
 	public function actionSubscribe() {
 		$this->render('subscribe');
 	}
+
+
+
+	/**
+	 * Subscribe Action
+	 */
+	public function actionForgotpassword() {
+		$this->render('forgotpassword');
+	}
+
+
 }
