@@ -153,5 +153,18 @@ class UserController extends Controller {
 		}
 	}
 
+	public function actionGetMailRecoveryPassword(){
+		 $data = '';
+		$data .= 'AlternativeEmail='.$_POST['email'];
+		$data .= '&UserName='.$_POST['username'];
+		$response = $this->curlPost('profileWebService/getMailRecovery', $data);
+		if ( $response->code == 0) {
+			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
+		} else {
+			var_dump($response);die();
+			$this->redirect('/site/login');
+		}
+	}
+
 
 }

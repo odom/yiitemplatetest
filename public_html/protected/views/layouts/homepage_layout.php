@@ -161,19 +161,18 @@
             <div class="main-content">
 
 	            <?php /* @var $this Controller */ ?>
+	            <!--Start Social Share (fb, twitter,...)-->
+	            <div class="social-share">
+		            <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png"/></a>
+		            <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
+		            <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
+		            <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
+	            </div>
+	            <!--End Social Share (fb, twitter,...)-->
+
 	            <?php $this->beginContent('//layouts/main'); ?>
 		            <?php echo $content; ?>
 	            <?php $this->endContent(); ?>
-
-                <!--Start Social Share (fb, twitter,...)-->
-                <div class="social-share">
-                    <a href="http://www.facebook.com/CoSync" class="" target="_blank"><img src="../images/facebook.png"/></a>
-                    <a href="http://twitter.com/" class="" target="_blank"><img src="../images/twitter.png" /></a>
-                    <a href="http://www.linkedin.com/" class="" target="_blank"><img src="../images/linkedin.png" /></a>
-                    <a href="http://plus.google.com/" class="" target="_blank"><img src="../images/google.png" /></a>
-                </div>
-                <!--End Social Share (fb, twitter,...)-->
-
                 <!--Dialog create new room-->
                 <div id="dialog-modal">
                     <form class="form-horizontal" role="form">
