@@ -6,7 +6,11 @@
 $(document).ready(function() {
 	$carousel = $('#carousel-background').carousel();
 
-	$('.ajax').colorbox();
+	//$('.ajax').colorbox();
+
+	$(document.body).on('click','.ajax',function(){
+		$('.ajax').colorbox();
+	});
 
 }); //End of Document Ready
 
