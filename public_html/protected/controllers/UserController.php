@@ -179,7 +179,7 @@ class UserController extends Controller {
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
 		} else {
-			var_dump($response);die();
+//			var_dump($response);die();
 			$this->redirect('/site/login');
 		}
 	}
