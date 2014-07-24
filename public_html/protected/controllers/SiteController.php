@@ -141,4 +141,15 @@ class SiteController extends Controller {
 	public function actionSubscribe() {
 		$this->render('subscribe');
 	}
+
+
+
+	/**
+	 * Subscribe Action
+	 */
+	public function actionForgotpassword() {
+		$this->render('forgotpassword');
+	}
+
+
 }
