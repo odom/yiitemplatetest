@@ -7,6 +7,7 @@ class UserController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
+		var_dump(Yii::app()->params['url']); die();
 //		if(Yii::app()->session['AccessKey']){
 //
 //		}else{
@@ -150,6 +151,23 @@ class UserController extends Controller {
 		} else {
 			var_dump($response);die();
 			$this->redirect('/site');
+		}
+	}
+
+	public function actionChangePassword(){
+		$data = '';
+		$data .='AccessKey='.$_POST['AccessKey'];
+		$data .='&UserID='.$_POST['userId'];
+		$data .='&CurrentPassword='.$_POST['oldPassword'];
+		$data .='&NewPassword='.$_POST['newPassword'];
+
+		$response = $this->curlPost('profileWebService/changePassword', $data);
+		if ( $response->code == 0) {
+			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
+		} else {
+			var_dump($response);die();
+			$this->redirect('/site/login');
+			$this->render('resetSuccess', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
 		}
 	}
 

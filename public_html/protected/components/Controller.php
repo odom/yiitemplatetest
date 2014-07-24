@@ -22,6 +22,10 @@ class Controller extends CController
 	public $breadcrumbs=array();
 
 	public function curlPost($action, $data){
+		/*production Url*/
+		//$url = 'http://ec2-23-23-171-236.compute-1.amazonaws.com/afinos/';
+
+		/*development Url*/
 		$url = 'http://ec2-23-23-171-236.compute-1.amazonaws.com/afinos-development/';
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url.$action);
