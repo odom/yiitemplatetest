@@ -91,3 +91,8 @@ footer {
 	background: none;
 	border: 0;
 }
+
+#forgot{
+	background:rgba(40, 132, 112, 0.8);
+	padding: 4px 8px 4px 8px;
+}
