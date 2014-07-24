@@ -14,6 +14,10 @@
 					<input class="form-control input-lg" type="password" name="password" placeholder="Password">
 				</div>
 				<br>
+				<a href="#" style="color: #FFFFFF">Forget password</a>
+
+				<br>
+				<br>
 				<button type="submit" class="btn btn-lg btn-primary">&nbsp;&nbsp;&nbsp; ENTER &nbsp;&nbsp;&nbsp;</button>
 				<!--
 				<div class="social-sign-in">
