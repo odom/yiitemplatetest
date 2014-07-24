@@ -122,7 +122,7 @@ class SiteController extends Controller {
 		$this->layout = 'homepage_layout';
 		$this->render('home');
         }else{
-            $this->redirect('/site/index');
+            $this->redirect('/site');
         }
 	}
 
