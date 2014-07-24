@@ -117,13 +117,11 @@ class UserController extends Controller {
 			$input = null;
 			$input .= 'UserID='.$response->data->UserID;
 			$input .= '&AccessKey='.$response->data->AccessKey;
-//			var_dump($input);die;
 
 			$myProfile = $this->curlPost('profileWebService/getProfile', $input);
 			$roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
 			$roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
 			$myContact = $this->curlPost('profileWebService/getContact', $input);
-//			var_dump($myProfile);die();
 
 			$output = array(
 				'profile'=>$myProfile->data,
@@ -131,9 +129,11 @@ class UserController extends Controller {
 				'yourWorlds'=> $roomYourWorld->data,
 				'contacts'=> $myContact->data
 			);
-//			var_dump($output);die();
+
 			$this->layout = 'homepage_layout';
-//			$this->redirect('/site/home');
+			/**
+			 * TODO: Change render to use redirect. 
+			 */
 			$this->render('/site/home', array('output'=>$output));
 		}
 	}
