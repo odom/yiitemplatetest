@@ -15,7 +15,9 @@
 				</div>
 				<br>
 				<!--<a href="#" style="color: #FFFFFF" id="forgotpassword">Forget password</a>-->
-				<a  class="ajax" href="<?php echo $this->createUrl('site/Forgotpassword') ?>">Forgot Password</a>
+				<a  class="ajax" href="<?php echo $this->createUrl('site/Forgotpassword') ?>"><span
+						style="color:#ffffff">Forgot
+						Password</span></a>
 				<br/>
 				<br/>
 
