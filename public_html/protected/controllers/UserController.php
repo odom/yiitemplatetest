@@ -22,6 +22,14 @@ class UserController extends Controller {
 		$this->layout = 'resetpassword';
 	}
 
+	public function actionLogout() {
+		unset(Yii::app()->session['AccessKey']);
+		unset(Yii::app()->session['UserID']);
+		$this->layout = 'register_layout';
+		$this->redirect('/site');
+
+	}
+
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -113,29 +121,8 @@ class UserController extends Controller {
 			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
 		} else {
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
-
-			//getRoomMyWorld
-			$input = null;
-			$input .= 'UserID='.$response->data->UserID;
-			$input .= '&AccessKey='.$response->data->AccessKey;
-
-			$myProfile = $this->curlPost('profileWebService/getProfile', $input);
-			$roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
-			$roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
-			$myContact = $this->curlPost('profileWebService/getContact', $input);
-
-			$output = array(
-				'profile'=>$myProfile->data,
-				'myWorlds'=> $roomMyWorld->data,
-				'yourWorlds'=> $roomYourWorld->data,
-				'contacts'=> $myContact->data
-			);
-
-			$this->layout = 'homepage_layout';
-			/**
-			 * TODO: Change render to use redirect. 
-			 */
-			$this->render('/site/home', array('output'=>$output));
+			Yii::app()->session['UserID'] = $response->data->UserID;
+			$this->redirect('/site/home');
 		}
 	}
 

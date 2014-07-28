@@ -1,7 +1,6 @@
 <?php
 
 class SiteController extends Controller {
-
 	/**
 	 * Declares class-based actions.
 	 */
@@ -20,7 +19,6 @@ class SiteController extends Controller {
 		);
 	}
 
-
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -34,8 +32,6 @@ class SiteController extends Controller {
         }
 	}
 
-
-
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -47,8 +43,6 @@ class SiteController extends Controller {
 				$this->render('error', $error);
 		}
 	}
-
-
 
 	/**
 	 * Displays the contact page
@@ -75,8 +69,6 @@ class SiteController extends Controller {
 		$this->render('contact',array('model'=>$model));
 	}
 
-
-
 	/**
 	 * Displays the login page
 	 */
@@ -88,8 +80,6 @@ class SiteController extends Controller {
 		}
 	}
 
-
-
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
@@ -99,8 +89,6 @@ class SiteController extends Controller {
         $this->redirect('/site');
 
 	}
-
-
 
 	/**
 	 * Register Action
@@ -112,20 +100,34 @@ class SiteController extends Controller {
 		}
 	}
 
-
-
 	/**
 	 * Home Action
 	 */
 	public function actionHome() {
         if(Yii::app()->session['AccessKey']){
+	        //getRoomMyWorld
+	        $input = null;
+	        $input .= 'UserID='.Yii::app()->session['UserID'];//session user id;
+	        $input .= '&AccessKey='.Yii::app()->session['AccessKey'];//session acesskey;
+
+	        $myProfile = $this->curlPost('profileWebService/getProfile', $input);
+	        $roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
+	        $roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
+	        $myContact = $this->curlPost('profileWebService/getContact', $input);
+
+	        $output = array(
+		        'profile'=>$myProfile->data,
+		        'myWorlds'=> $roomMyWorld->data,
+		        'yourWorlds'=> $roomYourWorld->data,
+		        'contacts'=> $myContact->data
+	        );
+
 		$this->layout = 'homepage_layout';
-		$this->render('home');
+		$this->render('home', array('output'=>$output));
         }else{
             $this->redirect('/site');
         }
 	}
-
 
 	/**
 	 * Unsubscribe Action
@@ -134,15 +136,12 @@ class SiteController extends Controller {
 		$this->render('unsubscribe');
 	}
 
-
 	/**
 	 * Subscribe Action
 	 */
 	public function actionSubscribe() {
 		$this->render('subscribe');
 	}
-
-
 
 	/**
 	 * Subscribe Action
