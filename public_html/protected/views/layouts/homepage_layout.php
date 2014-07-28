@@ -32,12 +32,12 @@
                         <span class="menu-header-left"></span>
                         <i class="triangle-topleft"></i>
                         <div class="menu-item" id="menu-item">
-                            <span class="profile-image"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/../images/avatar.png" /></a></span>
-                            <ul>
-                                <li><i class="fa fa-circle icon-online"></i></li>
-                                <li><i class="fa fa-info-circle icon-info"></i></li>
-                            </ul>
-                            <span class="profile-name">Sopheak</span>
+<!--                            <span class="profile-image"><a href="#"><img src="--><?php ///*echo Yii::app()->request->baseUrl; */?><!--/../images/avatar.png" /></a></span>-->
+<!--                            <ul>-->
+<!--                                <li><i class="fa fa-circle icon-online"></i></li>-->
+<!--                                <li><i class="fa fa-info-circle icon-info"></i></li>-->
+<!--                            </ul>-->
+<!--                            <span class="profile-name">Sopheak</span>-->
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@
                     </div>
                     <div class="list-view-group">
                         <ul id="roomYourWorld">
-                            <li>
+                            <!--<li>
                                 <a href="#">
                                     <div class="div-avatar">
                                         <img src="../images/Santa_Place.jpg"/>
@@ -95,7 +95,7 @@
                                         <i class="fa fa-dropbox dropbox"></i>
                                     </div>
                                 </a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                     <span class="direction-left"><a href="#" id="directionleft"><i class="fa fa-angle-double-left"></i></a></span>
