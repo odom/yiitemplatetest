@@ -1,12 +1,30 @@
 
+
+function testExtension(strFile) {
+	var ft = ["png", "jpg"];
+	for(var j=0; j<ft.length; j++){
+		if(ft[j] == strFile.substring(strFile.lastIndexOf('.')+1)){
+			return true;
+		}
+	}
+	return false;
+}
+
+
 /**
 * Prototype
 * */
 var listRoomMyWord = function (roomMyWorld) {
     var strMyWorld = "";
     var thumbnail = '../images/Santa_Place.jpg';
-    for(i=0; i< roomMyWorld.length; i++) {
-        var thum = myWorlds[i].ThumnailUrl == '' ? thumbnail:myWorlds[i].ThumnailUrl;
+    for(var i=0; i< roomMyWorld.length; i++) {
+
+        var thum ='';
+	    if(myWorlds[i].ThumnailUrl!='' && testExtension(myWorlds[i].ThumnailUrl)){
+		    thum=myWorlds[i].ThumnailUrl;
+	    } else{
+		    thum=thumbnail;
+	    }
         strMyWorld += '<li> <a href="#">' +
             '<div class="div-avatar">' +
                 '<img src="'+thum+'">' +
@@ -33,6 +51,8 @@ var listContact = function(contact){
 	}
 	$('#listContact').html(strContact);
 }
+
+
 var listRoomYourworld = function (roomYourWorld) {
     var strYourWorld = "";
     var thumbnail = '../images/Santa_Place.jpg';
@@ -47,6 +67,7 @@ var listRoomYourworld = function (roomYourWorld) {
     $('#roomYourWorld').html(strYourWorld);
 }
 
+
 var listProfile=function(myprofile){
 
     var thumbnail='../images/avatar.png';
@@ -60,6 +81,7 @@ var listProfile=function(myprofile){
 
     $('#menu-item').html(strProfile);
 }
+
 
 /**
  * MAIN
@@ -82,14 +104,6 @@ $('document').ready(function(){
 
 });
 
-function test(file){
-	var fileType = ["png", "jpg"];
-	for(i=0;i<fileType.length;i++){
-		if(fileType[i] == file.substring(file.lastIndexOf('.')+1)){
-			return true;
-		}
-	}
-	return false;
-}
+
 
 
