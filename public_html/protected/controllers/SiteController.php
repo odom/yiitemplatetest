@@ -105,7 +105,6 @@ class SiteController extends Controller {
 		        ->request->cookies['userData']->value : '';
 //	        var_dump($v);
 	        if($v == ''){
-		        die('name');
 		        $input = null;
 		        $input .= 'UserID='.Yii::app()->session['UserID'];//session user id;
 		        $input .= '&AccessKey='.Yii::app()->session['AccessKey'];//session acesskey;

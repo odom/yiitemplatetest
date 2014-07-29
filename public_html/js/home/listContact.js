@@ -82,4 +82,14 @@ $('document').ready(function(){
 
 });
 
+function test(file){
+	var fileType = ["png", "jpg"];
+	for(i=0;i<fileType.length;i++){
+		if(fileType[i] == file.substring(file.lastIndexOf('.')+1)){
+			return true;
+		}
+	}
+	return false;
+}
+
 
