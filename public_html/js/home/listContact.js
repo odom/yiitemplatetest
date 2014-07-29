@@ -1,15 +1,44 @@
 
+
+function testExtension(strFile) {
+	var ft = ["png", "jpg"];
+	for( var j=0; j<ft.length; j++){
+		if(ft[j] == strFile.substring(strFile.lastIndexOf('.')+1)){
+			return true;
+		}
+	}
+	return false;
+}
+
+
 /**
 * Prototype
 * */
-var listRoomMyWord = function (roomMyWorld) {
+var listProfile=function(myprofile){
+	var thumbnail='../images/avatar.png';
+	var thum = myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
+
+	var strProfile='<span class="profile-image">'+
+		'<a href="#"><img src="'+thum+'" /></a></span>'+
+		'<ul><li><i class="fa fa-circle icon-online"></i></li>'+
+		'<li><i class="fa fa-info-circle icon-info"></i></li></ul>'+
+		'<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>'
+
+	$('#menu-item').html(strProfile);
+}
+
+ var listRoomMyWord = function (roomMyWorld) {
     var strMyWorld = "";
     var thumbnail = '../images/Santa_Place.jpg';
-    for(i=0; i< roomMyWorld.length; i++) {
-        var thum = myWorlds[i].ThumnailUrl == '' ? thumbnail:myWorlds[i].ThumnailUrl;
-//	    if ( (myWorlds[i].ThumnailUrl != '') && test(myWorlds[i].ThumnailUrl)){
-//			console.log(myWorlds[i].ThumnailUrl);
-//	    }
+
+    for(var i=0; i< roomMyWorld.length; i++) {
+        var thum ='';
+
+	    if(myWorlds[i].ThumnailUrl!='' && testExtension(myWorlds[i].ThumnailUrl)){
+		    thum=myWorlds[i].ThumnailUrl;
+	    } else{
+		    thum=thumbnail;
+	    }
         strMyWorld += '<li> <a href="#">' +
             '<div class="div-avatar">' +
                 '<img src="'+thum+'">' +
@@ -23,12 +52,20 @@ var listRoomMyWord = function (roomMyWorld) {
 var listContact = function(contact){
 	var strContact = "";
 	var defaultAvata = '../images/avatar.png';
+//	console.log(contact[20].DisplayName);
 	for(i=0 ; i< contact.length; i++){
+
 		var thum = contact[i].ImageAvatar == '' ? defaultAvata:contact[i].ImageAvatar;
+		if(contact[i].ImageAvatar !='' && testExtension(contact[i].ImageAvatar)){
+			thum=contact[i].ImageAvatar;
+		} else{
+			thum=defaultAvata;
+		}
+
 		strContact += '<li><a href="#">'+
 							'<div class="div-avatar">'+
 								'<img src="'+thum+'" />'+
-								'<span class="list-view">'+contact[i].DisplayName+'</span>'+
+								'<span class="list-view">'+contact[i].DisplayName +'</span>'+
 							'</div>' +
 						'</a>'+
 					'</li>'
@@ -36,16 +73,19 @@ var listContact = function(contact){
 	}
 	$('#listContact').html(strContact);
 }
+
+
 var listRoomYourworld = function (roomYourWorld) {
     var strYourWorld = "";
     var thumbnail = '../images/Santa_Place.jpg';
-    for(i=0; i< roomYourWorld.length; i++) {
-        var thum = roomYourWorld[i].Thumnailrl == '' ? thumbnail:roomYourWorld[i].ThumnailUrl;
-//	    if ( (roomYourWorld[i].Thumnailrl != '') && test(roomYourWorld[i].Thumnailrl)){
-//		    thum = roomYourWorld[i].Thumnailrl;
-//	    }else{
-//		    thum = thumbnail;
-//	    }
+//	console.log(roomYourWorld[0].ThumnailUrl)
+	for(var i=0; i< roomYourWorld.length; i++) {
+	   var thum ='';
+	    if(roomYourWorld[i].ThumnailUrl != '' && testExtension(roomYourWorld[i].ThumnailUrl)){
+		    thum=roomYourWorld[i].ThumnailUrl;
+	    } else{
+		    thum=thumbnail;
+	    }
         strYourWorld += '<li> <a href="#">' +
             '<div class="div-avatar">' +
             '<img src="'+thum+'">' +
@@ -55,26 +95,9 @@ var listRoomYourworld = function (roomYourWorld) {
     $('#roomYourWorld').html(strYourWorld);
 }
 
-var listProfile=function(myprofile){
-//	console.log(myprofile);
 
-    var thumbnail='../images/avatar.png';
-    thum=myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
 
-		if ( (myprofile.ImageUrl != '') && test(myprofile.ImageUrl)){
-			thum = myprofile.ImageUrl;
-	    }else{
-			thum = thumbnail;
-		}
 
-    strProfile='<span class="profile-image">'+
-    '<a href="#"><img src="'+thum+'" /></a></span>'+
-    '<ul><li><i class="fa fa-circle icon-online"></i></li>'+
-    '<li><i class="fa fa-info-circle icon-info"></i></li></ul>'+
-    '<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>'
-
-    $('#menu-item').html(strProfile);
-}
 
 /**
  * MAIN
@@ -97,15 +120,7 @@ $('document').ready(function(){
 
 });
 
-function test(file){
-	var fileType = ["png", "jpg"];
-	for(i=0;i<fileType.length;i++){
-		if(fileType[i] == file.substring(file.lastIndexOf('.')+1)){
-			return true;
-		}
-	}
-	return false;
-}
+
 
 
 
