@@ -7,6 +7,9 @@ var listRoomMyWord = function (roomMyWorld) {
     var thumbnail = '../images/Santa_Place.jpg';
     for(i=0; i< roomMyWorld.length; i++) {
         var thum = myWorlds[i].ThumnailUrl == '' ? thumbnail:myWorlds[i].ThumnailUrl;
+//	    if ( (myWorlds[i].ThumnailUrl != '') && test(myWorlds[i].ThumnailUrl)){
+//			console.log(myWorlds[i].ThumnailUrl);
+//	    }
         strMyWorld += '<li> <a href="#">' +
             '<div class="div-avatar">' +
                 '<img src="'+thum+'">' +
@@ -37,7 +40,12 @@ var listRoomYourworld = function (roomYourWorld) {
     var strYourWorld = "";
     var thumbnail = '../images/Santa_Place.jpg';
     for(i=0; i< roomYourWorld.length; i++) {
-        var thum = roomYourWorld[i].ThumnailUrl == '' ? thumbnail:roomYourWorld[i].ThumnailUrl;
+        var thum = roomYourWorld[i].Thumnailrl == '' ? thumbnail:roomYourWorld[i].ThumnailUrl;
+//	    if ( (roomYourWorld[i].Thumnailrl != '') && test(roomYourWorld[i].Thumnailrl)){
+//		    thum = roomYourWorld[i].Thumnailrl;
+//	    }else{
+//		    thum = thumbnail;
+//	    }
         strYourWorld += '<li> <a href="#">' +
             '<div class="div-avatar">' +
             '<img src="'+thum+'">' +
@@ -48,9 +56,16 @@ var listRoomYourworld = function (roomYourWorld) {
 }
 
 var listProfile=function(myprofile){
+//	console.log(myprofile);
 
     var thumbnail='../images/avatar.png';
     thum=myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
+
+		if ( (myprofile.ImageUrl != '') && test(myprofile.ImageUrl)){
+			thum = myprofile.ImageUrl;
+	    }else{
+			thum = thumbnail;
+		}
 
     strProfile='<span class="profile-image">'+
     '<a href="#"><img src="'+thum+'" /></a></span>'+
@@ -91,5 +106,6 @@ function test(file){
 	}
 	return false;
 }
+
 
 

@@ -136,7 +136,7 @@ class UserController extends Controller {
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
 		} else {
-			var_dump($response);die();
+//			var_dump($response);die();
 			$this->redirect('/site');
 		}
 	}
@@ -152,7 +152,7 @@ class UserController extends Controller {
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
 		} else {
-			var_dump($response);die();
+//			var_dump($response);
 			$this->redirect('/site/login');
 			$this->render('resetSuccess', $resetFail=array('code'=> $response->message->code, 'desc' => $response->message->description));
 		}
