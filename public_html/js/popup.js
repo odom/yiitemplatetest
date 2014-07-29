@@ -180,4 +180,13 @@ $(document).click(function (e) {
 //
 //});
 
+	if(window.location.pathname=='/site/home'){
+		if (localStorage.userData){
+			$('#userData').html(localStorage.userData);
+		}else{
+			localStorage.setItem('userData',$("#userData").text());
+			$.cookie('userData', 'true', { expires: 7 });
+		}
+	}
+
 }); //End of Document Ready

@@ -23,6 +23,7 @@
 
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     </head>
+
     <body class="homepage">
         <div class="whole-content">
             <!--Start Panel Left-->
@@ -173,6 +174,7 @@
 	            <?php $this->beginContent('//layouts/main'); ?>
 		            <?php echo $content; ?>
 	            <?php $this->endContent(); ?>
+
                 <!--Dialog create new room-->
                 <div id="dialog-modal">
                     <form class="form-horizontal" role="form">
