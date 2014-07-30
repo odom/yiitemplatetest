@@ -23,8 +23,13 @@ class UserController extends Controller {
 	}
 
 	public function actionLogout() {
-		unset(Yii::app()->session['AccessKey']);
-		unset(Yii::app()->session['UserID']);
+//		unset(Yii::app()->session['AccessKey']);
+//		unset(Yii::app()->session['UserID']);
+		Yii::app()->session->destroy();
+//		unset(Yii::app()->request->cookies['userData']);
+//		 var_dump(Yii::app()->request->cookies['userData']);
+		Yii::app()->request->cookies->clear();
+//		var_dump(Yii::app()->request->cookies['userData']);
 		$this->layout = 'register_layout';
 		$this->redirect('/site');
 
@@ -122,6 +127,7 @@ class UserController extends Controller {
 		} else {
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
 			Yii::app()->session['UserID'] = $response->data->UserID;
+
 			$this->redirect('/site/home');
 		}
 	}

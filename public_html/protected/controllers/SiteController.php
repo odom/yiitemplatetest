@@ -101,11 +101,10 @@ class SiteController extends Controller {
 		$output = array();
 		$this->layout = 'homepage_layout';
         if(Yii::app()->session['AccessKey']){
-	        $v = isset(Yii::app()->request->cookies['userData']) ? Yii::app()
-		        ->request->cookies['userData']->value : '';
-//	        var_dump($v);
-	        if($v == ''){
 
+//	        var_dump(isset(Yii::app()->request->cookies['userData'])); die();
+	        if( !isset(Yii::app()->request->cookies['userData'])) {
+		        Yii::app()->request->cookies['userData'] = new CHttpCookie('userData', true);
 		        $input = null;
 		        $input .= 'UserID='.Yii::app()->session['UserID'];//session user id;
 		        $input .= '&AccessKey='.Yii::app()->session['AccessKey'];//session acesskey;

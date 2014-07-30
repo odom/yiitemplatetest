@@ -181,11 +181,11 @@ $(document).click(function (e) {
 //});
 
 	if(window.location.pathname=='/site/home'){
-		if (localStorage.userData){
-			$('#userData').html(localStorage.userData);
-		}else{
+
+		if ($('#userData').text().length > 10) {
 			localStorage.setItem('userData',$("#userData").text());
-			$.cookie('userData', 'true', { expires: 7 });
+		} else {
+			$('#userData').html(localStorage.userData);
 		}
 	}
 
