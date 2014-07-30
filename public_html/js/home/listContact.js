@@ -19,15 +19,18 @@ var listProfile=function(myprofile){
 	var thum = myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
 	console.log(myprofile);
 	var detailProfile = '<div class="hidden" id="detailProfile">'
-	detailProfile += '<h3>'+ myprofile.PersonalProfile.DisplayName +'</h3>';
+	detailProfile += '<b>Display Name='+ myprofile.PersonalProfile.DisplayName +'</b><br/>';
+	detailProfile += '<b>First Name='+myprofile.PersonalProfile.FirstName+'</b><br/>';
+	detailProfile += '<b>Last Name='+myprofile.PersonalProfile.LastName+'</b>';
 	detailProfile += '</div>';
 	var strProfile='<span class="profile-image">'+
 		'<a href="#"><img src="'+thum+'" /></a></span>'+
 		'<ul><li><i class="fa fa-circle icon-online"></i></li>'+
-		'<li><i class="fa fa-info-circle icon-info"></i></li></ul>'+
-		'<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>'
+		'<li><i class="fa fa-info-circle icon-info" id="profileInfo"></i></li></ul>'+
+		'<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>';
 
 	$('#menu-item').html(strProfile + detailProfile);
+	$('#profileInfo').popover({html: true,content: $('#detailProfile').html()});
 }
 
  var listRoomMyWord = function (roomMyWorld) {
@@ -100,6 +103,50 @@ var listRoomYourworld = function (roomYourWorld) {
 
 
 
+var getMyworldByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.myWorlds.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.myWorlds[i].RoomID==id){
+			arr=data.myWorlds[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+var getYourWorldByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.yourWorlds.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.yourWorlds[i].RoomID==id){
+			arr=data.yourWorlds[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+var getContactByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.contacts.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.contacts[i].FriendID==id){
+			arr=data.contacts[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+
+
 
 
 /**
@@ -120,6 +167,19 @@ $('document').ready(function(){
 
     listProfile(myprofile);
 	$('html, #listContact, #roomYourWorld, #roomMyWorld').niceScroll();
+
+
+	$("#roomMyWorld li a").click(function(){
+		getMyworldByOne($(this).attr('id'));
+	});
+
+	$("#roomYourWorld li a").click(function(){
+		getYourWorldByOne($(this).attr('id'));
+	});
+
+	$("#listContact li a").click(function(){
+		getContactByOne($(this).attr('id'));
+	});
 
 });
 
