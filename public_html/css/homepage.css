@@ -674,7 +674,7 @@ body{
 }
 .status{
     position:relative;
-    top: -8px;
+    top: -12px;
     left:-2;
 }
 .online{
@@ -701,4 +701,13 @@ body{
 .div-avatar img {
     width: 35px;
     height: 35px;
+}
+.list-view{
+	display:inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:110px;
+	height:27px;
+	line-height: 27px;
 }

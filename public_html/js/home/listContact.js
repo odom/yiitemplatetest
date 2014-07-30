@@ -17,14 +17,17 @@ function testExtension(strFile) {
 var listProfile=function(myprofile){
 	var thumbnail='../images/avatar.png';
 	var thum = myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
-
+	console.log(myprofile);
+	var detailProfile = '<div class="hidden" id="detailProfile">'
+	detailProfile += '<h3>'+ myprofile.PersonalProfile.DisplayName +'</h3>';
+	detailProfile += '</div>';
 	var strProfile='<span class="profile-image">'+
 		'<a href="#"><img src="'+thum+'" /></a></span>'+
 		'<ul><li><i class="fa fa-circle icon-online"></i></li>'+
 		'<li><i class="fa fa-info-circle icon-info"></i></li></ul>'+
 		'<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>'
 
-	$('#menu-item').html(strProfile);
+	$('#menu-item').html(strProfile + detailProfile);
 }
 
  var listRoomMyWord = function (roomMyWorld) {
@@ -39,7 +42,7 @@ var listProfile=function(myprofile){
 	    } else{
 		    thum=thumbnail;
 	    }
-        strMyWorld += '<li> <a href="#">' +
+        strMyWorld += '<li> <a href="#" id="'+ myWorlds[i].RoomID +'">' +
             '<div class="div-avatar">' +
                 '<img src="'+thum+'">' +
                     '<span class="status offline"><i class="fa fa-circle"></i></span>' +
@@ -62,7 +65,7 @@ var listContact = function(contact){
 			thum=defaultAvata;
 		}
 
-		strContact += '<li><a href="#">'+
+		strContact += '<li><a href="#" id="'+contact[i].FriendID+'">'+
 							'<div class="div-avatar">'+
 								'<img src="'+thum+'" />'+
 								'<span class="list-view">'+contact[i].DisplayName +'</span>'+
@@ -86,7 +89,7 @@ var listRoomYourworld = function (roomYourWorld) {
 	    } else{
 		    thum=thumbnail;
 	    }
-        strYourWorld += '<li> <a href="#">' +
+        strYourWorld += '<li> <a href="#" id="'+roomYourWorld[i].RoomID+'">' +
             '<div class="div-avatar">' +
             '<img src="'+thum+'">' +
             '<span class="status offline"><i class="fa fa-circle"></i></span>' +
