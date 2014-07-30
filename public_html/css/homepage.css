@@ -711,3 +711,6 @@ body{
 	height:27px;
 	line-height: 27px;
 }
+#profileInfo{
+	cursor: pointer;
+}
