@@ -98,32 +98,33 @@ class SiteController extends Controller {
 	 * Home Action
 	 */
 	public function actionHome() {
-		$output = array();
+//		$output = array();
 		$this->layout = 'homepage_layout';
-        if(Yii::app()->session['AccessKey']){
-
-//	        var_dump(isset(Yii::app()->request->cookies['userData'])); die();
-	        if( !isset(Yii::app()->request->cookies['userData'])) {
-		        Yii::app()->request->cookies['userData'] = new CHttpCookie('userData', true);
-		        $input = null;
-		        $input .= 'UserID='.Yii::app()->session['UserID'];//session user id;
-		        $input .= '&AccessKey='.Yii::app()->session['AccessKey'];//session acesskey;
-
-		        $myProfile = $this->curlPost('profileWebService/getProfile', $input);
-		        $roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
-		        $roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
-		        $myContact = $this->curlPost('profileWebService/getContact', $input);
-
-		        $output = array(
-			        'profile'=>$myProfile->data,
-			        'myWorlds'=> $roomMyWorld->data,
-			        'yourWorlds'=> $roomYourWorld->data,
-			        'contacts'=> $myContact->data
-		        );
-	        }
-	        //getRoomMyWorld
-	        $this->render('home', array('output'=>$output));
-        }
+//        if(Yii::app()->session['AccessKey']){
+//
+//	        if( !isset(Yii::app()->request->cookies['userData'])) {
+//		        Yii::app()->request->cookies['userData'] = new CHttpCookie('userData', true);
+//		        Yii::app()->request->cookies['id'] = new CHttpCookie('id', Yii::app()->session['UserID']);
+//		        Yii::app()->request->cookies['key'] = new CHttpCookie('key', Yii::app()->session['AccessKey']);
+//		        $input = null;
+//		        $input .= 'UserID='.Yii::app()->session['UserID'];//session user id;
+//		        $input .= '&AccessKey='.Yii::app()->session['AccessKey'];//session acesskey;
+//
+//		        $myProfile = $this->curlPost('profileWebService/getProfile', $input);
+//		        $roomMyWorld = $this->curlPost('room/getRoomMyWorld', $input);
+//		        $roomYourWorld = $this->curlPost('room/getRoomYourWorld', $input);
+//		        $myContact = $this->curlPost('profileWebService/getContact', $input);
+//
+//		        $output = array(
+//			        'profile'=>$myProfile->data,
+//			        'myWorlds'=> $roomMyWorld->data,
+//			        'yourWorlds'=> $roomYourWorld->data,
+//			        'contacts'=> $myContact->data
+//		        );
+//	        }
+//	        //getRoomMyWorld
+	        $this->render('home');
+//        }
 	}
 
 	/**

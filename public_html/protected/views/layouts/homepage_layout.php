@@ -381,7 +381,7 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popup.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
         <script src="http://54.221.195.231/socket.io/socket.io.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/home/listContact.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/home/home.js"></script>
     
     </body>
 

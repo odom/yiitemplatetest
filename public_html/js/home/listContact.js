@@ -1,4 +1,4 @@
-
+var socket = null;
 
 function testExtension(strFile) {
 	var ft = ["png", "jpg"];
@@ -17,7 +17,6 @@ function testExtension(strFile) {
 var listProfile=function(myprofile){
 	var thumbnail='../images/avatar.png';
 	var thum = myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
-	console.log(myprofile);
 	var detailProfile = '<div class="hidden" id="detailProfile">'
 	detailProfile += '<h3>'+ myprofile.PersonalProfile.DisplayName +'</h3>';
 	detailProfile += '</div>';
@@ -99,19 +98,82 @@ var listRoomYourworld = function (roomYourWorld) {
 }
 
 
-
-
-
 /**
  * MAIN
  */
-$('document').ready(function(){
+var message = {
+	Header:{
+		From : 'world',
+		To : '',
+		DateTime :'',
+		PartnerID : '',
+		HubID : '',
+		Type : '',
+		DeviceType: '',
+		DeviceOS : '',
+		FromIP : '',
+		Region : ''
+	},
+	Body:{
+		ID : '',
+		ObjectType : 10000,
+		Action :10
+	}
 
-    var data = $.parseJSON($('#userData').val());
+};
+
+var getHubInfo = function() {
+	var input ={
+		FriendName: "titi",
+		Offset : 0,
+		Limit : 20,
+		AccessKey : $.cookie('key')
+
+	};
+	message.Body.Data = input
+	console.log(JSON.stringify(message));
+
+	console.log("SPeeder1");
+	console.log(socket);
+	socket.emit('searchContact', JSON.stringify(message));
+	console.log("SPeeder2");
+
+	socket.on('searchContact-result', function(data) {
+		console.log("SPeeder");
+		console.log(data);
+	});
+};
+
+$(document).ready(function(){
+	socket = io.connect('http://192.168.1.88:3000');
+
+
+
+	var data = $.parseJSON($('#userData').val());
     myWorlds = data.myWorlds;
 	contact = data.contacts;
     yourworlds=data.yourWorlds;
     myprofile=data.profile;
+
+	var input ={
+		FriendName: "titi",
+		Offset : 0,
+		Limit : 20,
+		AccessKey : $.cookie('key')
+
+	};
+	message.Body.Data = input
+	console.log(JSON.stringify(message));
+
+	console.log("SPeeder1");
+	console.log(socket);
+	socket.emit('searchContact', JSON.stringify(message));
+	console.log("SPeeder2");
+
+	socket.on('searchContact-result', function(data) {
+		console.log("SPeeder");
+		console.log(data);
+	});
 
     listRoomMyWord(myWorlds);
 	listContact(contact);

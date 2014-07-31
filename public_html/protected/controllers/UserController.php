@@ -125,6 +125,7 @@ class UserController extends Controller {
 		if ( $response->code == 0) {
 			$this->render('resetFail', $resetFail=array('code'=> $message->code, 'desc' => $message->description));
 		} else {
+			
 			Yii::app()->session['AccessKey'] = $response->data->AccessKey;
 			Yii::app()->session['UserID'] = $response->data->UserID;
 

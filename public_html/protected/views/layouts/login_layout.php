@@ -25,6 +25,6 @@
 	<?php echo $content; ?>
 
 </div><!-- page -->
-
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/login.js"></script>
 </body>
 </html>

@@ -38,6 +38,8 @@
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/lib/colorbox/jquery.colorbox.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/register.js"></script>
-
+<script src="http://54.221.195.231/socket.io/socket.io.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cookie.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/login.js"></script>
 </body>
 </html>
