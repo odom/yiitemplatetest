@@ -45,8 +45,8 @@ $(document).click(function (e) {
         //        title: '<span class="title-popup">Change Background</span><a class="close" href="#");">&nbsp;&times;</a>',
         title: '<span class="title-popup">Change background</span>',
         content: function() {
-            return $(".forgot_box").html();
-        }//, template: '<div class="popover chbackground"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
+            return $(".chang_background_box").html();
+        }, template: '<div class="popover chbackground"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
         
     });
 
