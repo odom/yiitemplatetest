@@ -30,8 +30,49 @@ message = {
 /*
 * View function
 * */
-function testExtension(strFile) {
-	console.log('66666666666666666666666666');
+var getMyworldByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.myWorlds.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.myWorlds[i].RoomID==id){
+			arr=data.myWorlds[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+var getYourWorldByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.yourWorlds.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.yourWorlds[i].RoomID==id){
+			arr=data.yourWorlds[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+var getContactByOne = function (id){
+	data=$.parseJSON($('#userData').val());
+	l=data.contacts.length;
+	var arr;
+	for(var i=0;i <l ;i++){
+
+		if(data.contacts[i].FriendID==id){
+			arr=data.contacts[i];
+			break;
+		}
+	}
+	console.log(arr);
+}
+
+ function testExtension(strFile) {
 	var ft = ["png", "jpg"];
 	for(var j=0; j<ft.length; j++){
 		if(ft[j] == strFile.substring(strFile.lastIndexOf('.')+1)){
@@ -77,8 +118,6 @@ var listRoomMyWord = function (roomMyWorld) {
 }
 
  var listRoomYourworld = function (roomYourWorld) {
-	 console.log('55555555555555555555555555555')
-	console.log(roomYourWorld);
 	var strYourWorld = "";
 	var thumbnail = '../images/Santa_Place.jpg';
 	for(var i=0; i< roomYourWorld.length; i++) {
@@ -103,47 +142,31 @@ var listRoomMyWord = function (roomMyWorld) {
  *  */
 
 var requestRoomYourWorld = function(id, key){
-	console.log(id + " "+ key);
 	var input = {
 		UserID : id,
 		AccessKey : key
 	};
 	message.Body.Data = input;
-	console.log('333333333333333333');
-	console.log(message);
-	console.log(JSON.stringify(message));
 	socket.emit('getRoomYourWorld', JSON.stringify(message));
-	console.log('33333333333333333311111');
 	socket.on('getRoomYourWorld-result', function(result){
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
-		console.log(usageData);
 		if(usageData.code == "1"){
-			console.log('4444444444444444444444444');
-			console.log(usageData);
 			listRoomYourworld(usageData.data);
 		}
 	});
 }
 var requestRoomMyWorld = function(id, key){
-	console.log(id + " "+ key);
 	var input = {
 		UserID : id,
 		AccessKey : key
 	};
 	message.Body.Data = input;
-	console.log('333333333333333333');
-	console.log(message);
-	console.log(JSON.stringify(message));
 	socket.emit('getRoomMyWorld', JSON.stringify(message));
-	console.log('33333333333333333311111');
 	socket.on('getRoomMyWorld-result', function(result){
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
-		console.log(usageData);
 		if(usageData.code == "1"){
-			console.log('4444444444444444444444444');
-			console.log(usageData);
 			listRoomMyWord(usageData.data);
 		}
 	});
@@ -152,22 +175,15 @@ var requestRoomMyWorld = function(id, key){
 
 
 var login = function(key){
-	console.log(key);
 	var input = {
 		AccessKey: key
 	};
 	message.Body.Data = input;
-	console.log('111111111111111111111111111');
-	console.log(message);
 	socket.emit('login', JSON.stringify(message));
 	socket.on('login-result', function(result){
-//		console.log('after login');
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
-		console.log(usageData);
 		if(usageData.code == "1"){
-			console.log('222222222222222222222222222222');
-			console.log('key '+usageData.data.AccessKey);
 			$.cookie('AccessKey', $.cookie('AccessKey'));
 			$.cookie('UserID', usageData.data.UserID );
 			requestRoomYourWorld(usageData.data.UserID ,$.cookie('AccessKey'));
@@ -184,4 +200,17 @@ var login = function(key){
 * */
 $(document).ready(function(){
 	login($.cookie('AccessKey'));
+	$('html, #listContact, #roomYourWorld, #roomMyWorld').niceScroll();
+
+//	$("#roomMyWorld li a").click(function(){
+//		getMyworldByOne($(this).attr('id'));
+//	});
+//
+//	$("#roomYourWorld li a").click(function(){
+//		getYourWorldByOne($(this).attr('id'));
+//	});
+//
+//	$("#listContact li a").click(function(){
+//		getContactByOne($(this).attr('id'));
+//	});
 });
