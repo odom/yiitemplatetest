@@ -7,6 +7,7 @@
 * */
 
 socket = io.connect('http://54.221.195.231:3000');
+userData = {};
 message = {
 	Header:{
 		From : 'world',
@@ -135,6 +136,74 @@ var listRoomMyWord = function (roomMyWorld) {
 	}
 	$('#roomYourWorld').html(strYourWorld);
 }
+var listProfile=function(myprofile){
+//	console.log(myprofile);
+	var thumbnail='../images/avatar.png';
+	var thum = myprofile.ImageUrl==''?thumbnail:myprofile.ImageUrl;
+	var detailProfile = '<div class="hidden" id="detailProfile">'
+	detailProfile += '<b>Display Name='+ myprofile.PersonalProfile.DisplayName +'</b><br/>';
+	detailProfile += '<b>First Name='+myprofile.PersonalProfile.FirstName+'</b><br/>';
+	detailProfile += '<b>Last Name='+myprofile.PersonalProfile.LastName+'</b>';
+	detailProfile += '</div>';
+	var strProfile='<span class="profile-image">'+
+		'<a href="#"><img src="'+thum+'" /></a></span>'+
+		'<ul><li><i class="fa fa-circle icon-online"></i></li>'+
+		'<li><i class="fa fa-info-circle icon-info" id="profileInfo"></i></li></ul>'+
+		'<span class="profile-name">'+myprofile.PersonalProfile.DisplayName+'</span>';
+
+	$('#menu-item').html(strProfile + detailProfile);
+	$('#profileInfo').popover({html: true,content: $('#detailProfile').html()});
+
+	var listContact = function(contact){
+		var strContact = "";
+		var defaultAvata = '../images/avatar.png';
+//	console.log(contact[20].DisplayName);
+		for(i=0 ; i< contact.length; i++){
+
+			var thum = contact[i].ImageAvatar == '' ? defaultAvata:contact[i].ImageAvatar;
+			if(contact[i].ImageAvatar !='' && testExtension(contact[i].ImageAvatar)){
+				thum=contact[i].ImageAvatar;
+			} else{
+				thum=defaultAvata;
+			}
+
+			strContact += '<li><a href="#" id="'+contact[i].FriendID+'">'+
+				'<div class="div-avatar">'+
+				'<img src="'+thum+'" />'+
+				'<span class="list-view">'+contact[i].DisplayName +'</span>'+
+				'</div>' +
+				'</a>'+
+				'</li>'
+
+		}
+		$('#listContact').html(strContact);
+	}
+}
+var listContact = function(contact){
+	var strContact = "";
+	var defaultAvata = '../images/avatar.png';
+//	console.log(contact[20].DisplayName);
+	for(i=0 ; i< contact.length; i++){
+
+		var thum = contact[i].ImageAvatar == '' ? defaultAvata:contact[i].ImageAvatar;
+		if(contact[i].ImageAvatar !='' && testExtension(contact[i].ImageAvatar)){
+			thum=contact[i].ImageAvatar;
+		} else{
+			thum=defaultAvata;
+		}
+
+		strContact += '<li><a href="#" id="'+contact[i].FriendID+'">'+
+			'<div class="div-avatar">'+
+			'<img src="'+thum+'" />'+
+			'<span class="list-view">'+contact[i].DisplayName +'</span>'+
+			'</div>' +
+			'</a>'+
+			'</li>'
+
+	}
+	$('#listContact').html(strContact);
+}
+
 // End View function
 
 /*
@@ -152,6 +221,7 @@ var requestRoomYourWorld = function(id, key){
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
 		if(usageData.code == "1"){
+			userData.yourWorlds = usageData.data;
 			listRoomYourworld(usageData.data);
 		}
 	});
@@ -167,12 +237,45 @@ var requestRoomMyWorld = function(id, key){
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
 		if(usageData.code == "1"){
+			userData.myWorlds = usageData.data;
 			listRoomMyWord(usageData.data);
 		}
 	});
 }
 
+var requestProfileInfo = function(id, key){
+	var input = {
+		UserID : id,
+		AccessKey : key
+	};
+	message.Body.Data = input;
+	socket.emit('getProfile', JSON.stringify(message));
+	socket.on('getProfile-result', function(result){
+		var output = JSON.parse(result);
+		var usageData = JSON.parse(output.Body.Data);
+		if(usageData.code == "1"){
+			userData.profile = usageData.data;
+			listProfile(usageData.data);
+		}
+	});
+}
 
+var requestGetContact = function(id, key){
+	var input = {
+		UserID : id,
+		AccessKey : key
+	};
+	message.Body.Data = input;
+	socket.emit('getContact', JSON.stringify(message));
+	socket.on('getContact-result', function(result){
+		var output = JSON.parse(result);
+		var usageData = JSON.parse(output.Body.Data);
+		if(usageData.code == "1"){
+			userData.contacts = usageData.data;
+			listContact(usageData.data);
+		}
+	});
+}
 
 var login = function(key){
 	var input = {
@@ -184,13 +287,16 @@ var login = function(key){
 		var output = JSON.parse(result);
 		var usageData = JSON.parse(output.Body.Data);
 		if(usageData.code == "1"){
-			$.cookie('AccessKey', $.cookie('AccessKey'));
-			$.cookie('UserID', usageData.data.UserID );
+			$.cookie('AccessKey', $.cookie('AccessKey'), {path:'/'});
+			$.cookie('UserID', usageData.data.UserID, {path:'/'});
 			requestRoomYourWorld(usageData.data.UserID ,$.cookie('AccessKey'));
 			requestRoomMyWorld(usageData.data.UserID ,$.cookie('AccessKey'));
+			requestProfileInfo(usageData.data.UserID ,$.cookie('AccessKey'));
+			requestGetContact(usageData.data.UserID ,$.cookie('AccessKey'));
 		}
 	});
 };
+
 // End request function
 
 
@@ -199,18 +305,7 @@ var login = function(key){
 * Main javascript in home
 * */
 $(document).ready(function(){
-	login($.cookie('AccessKey'));
 	$('html, #listContact, #roomYourWorld, #roomMyWorld').niceScroll();
-
-//	$("#roomMyWorld li a").click(function(){
-//		getMyworldByOne($(this).attr('id'));
-//	});
-//
-//	$("#roomYourWorld li a").click(function(){
-//		getYourWorldByOne($(this).attr('id'));
-//	});
-//
-//	$("#listContact li a").click(function(){
-//		getContactByOne($(this).attr('id'));
-//	});
+	login($.cookie('AccessKey'));
+	$('textarea').text(JSON.stringify(userData));
 });
